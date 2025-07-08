@@ -1,0 +1,22 @@
+$breakpoints: (
+  // 374px以下の画面幅で適用
+  'xs': 'screen and (max-width: 374px)',
+  // 576px以下の画面幅で適用
+  'sm': 'screen and (max-width: 576px)',
+  // 768px以下の画面幅で適用
+  'md': 'screen and (max-width: 768px)',
+  // 980px以下の画面幅で適用
+  'lg': 'screen and (max-width: 980px)',
+  // 1260px以下の画面幅で適用
+  'xl': 'screen and (max-width: 1260px)',
+
+  'xlp': 'screen and (min-width: 1261px)',
+  // 1440px以上の画面幅で適用
+  'xxl': 'screen and (min-width: 1440px)'
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

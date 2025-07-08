@@ -1,0 +1,369 @@
+@use "../../../global" as g;
+
+.p-guideline {
+  &__container {
+    background-image: url(../images/guideline/guideline-fv-bg-pc@2x.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-block: 197px 134px;
+    @include g.mq(md) {
+      background-image: url(../images/guideline/guideline-fv-bg-sp@2x.webp);
+      padding-block: 121px 95px;
+    }
+  }
+  &__itemTitle {
+    margin-block-end: 39px;
+    @include g.mq(md) {
+      margin-block-end: clamp(54px, 14.39vw, 108px);
+    }
+  }
+  &__outer {
+    padding-inline: 2.7778vw;
+    position: relative;
+    @include g.mq(md) {
+      padding-inline: 0;
+    }
+  }
+  &__inner {
+    max-width: 833px;
+    margin-inline: auto;
+    padding-block: 117px 178px;
+    @include g.mq(md) {
+      padding-block: clamp(55.2px, 14.7vw, 110.4px)
+        clamp(98.9px, 26.37vw, 197.8px);
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  &__flowOuter {
+    // position: relative;
+  }
+  &__flowWrapper {
+    // position: absolute;
+    // left: 50%;
+    // top: 0;
+    // transform: translateX(-50%);
+    max-width: 875px;
+    // height: 300px;
+    height: auto;
+    position: relative;
+    // width: clamp(437.5px, 60.76vw, 875px);
+    // height: clamp(150px, 20.83vw, 300px);
+  }
+  &__flow {
+    position: absolute;
+    // top: calc(clamp(10px, 1.38vw, 20px) * -1);
+    // left: calc(clamp(10px, 1.38vw, 20px) * -1);
+    top: -20px;
+    left: -20px;
+    // left: 48%;
+    // transform: translateX(-50%);
+    // width: 100%;
+    // height: 100%;
+    // margin-inline: auto;
+    position: relative;
+    // height: clamp(128px, 28.9vw, 256px);
+
+    // width: clamp(437.5px, 60.76vw, 875px);
+    // height: clamp(150px, 20.83vw, 300px);
+    width: clamp(437.5px, 89.28vw, 875px);
+    height: clamp(150px, 30.6vw, 300px);
+    // max-height: 300px;
+    // max-width: 875px;
+    @include g.mq(lg) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include g.mq(md) {
+      width: clamp(340.75px, 90.867vw, 681.5px);
+      height: clamp(104.6px, 27.893vw, 209.2px);
+
+    wid
+
+      <svg width="376" height="149" viewBox="0 0 376 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_2283_3123)">
+<path d="M305.863 22C285.257 22 266.524 34.1827 258.137 53.0355C257.637 54.1589 258.142 55.4747 259.262 55.9752C260.384 56.4758 261.698 55.9703 262.198 54.847C269.871 37.5968 287.012 26.4511 305.863 26.4511C332.208 26.4511 353.641 47.9143 353.641 74.2965C353.641 100.679 332.208 122.142 305.863 122.142C287.011 122.142 269.871 110.996 262.198 93.7461C261.698 92.6228 260.384 92.119 259.262 92.6179C258.141 93.1184 257.637 94.4342 258.136 95.5576C266.522 114.412 285.257 126.595 305.863 126.595C334.66 126.595 358.087 103.134 358.087 74.2965C358.087 45.4588 334.66 22 305.863 22Z" fill="white"/>
+</g>
+<g filter="url(#filter1_d_2283_3123)">
+<path d="M152.186 75.8718C152.288 75.7675 152.381 75.655 152.463 75.5327C152.498 75.4773 152.524 75.4186 152.555 75.3615C152.594 75.2914 152.637 75.2229 152.668 75.1495C152.699 75.0762 152.715 74.9995 152.738 74.9229C152.756 74.8593 152.78 74.799 152.793 74.7338C152.85 74.4452 152.85 74.1501 152.793 73.8615C152.78 73.7963 152.756 73.736 152.738 73.6724C152.715 73.5974 152.699 73.5207 152.668 73.4457C152.637 73.3707 152.594 73.3039 152.555 73.2338C152.524 73.1767 152.5 73.118 152.463 73.0626C152.381 72.9403 152.288 72.8262 152.186 72.7234L140.628 61.1489C139.76 60.2799 138.352 60.2799 137.484 61.1489C136.616 62.0179 136.616 63.4283 137.484 64.2973L145.247 72.0713H124.846C120.834 72.0713 117.505 75.1137 117.099 79.1474C114.636 103.658 94.1996 122.142 69.5643 122.142C56.676 122.142 44.5952 117.081 35.5443 107.891C26.4952 98.703 21.6107 86.5301 21.7915 73.6137C21.9689 60.8799 27.1399 48.9418 36.3535 39.9988C45.5786 31.0476 57.6773 26.2362 70.4109 26.4612C88.8935 26.7824 105.701 37.9248 113.229 54.8472C113.729 55.9706 115.041 56.4744 116.165 55.9755C117.287 55.475 117.79 54.1592 117.29 53.0358C109.061 34.5384 90.6894 22.359 70.4874 22.0084C56.5636 21.7704 43.3382 27.0204 33.2584 36.8031C23.19 46.576 17.5388 59.6277 17.345 73.5533C17.1496 87.6697 22.4883 100.974 32.3792 111.018C42.2718 121.063 55.4776 126.595 69.5643 126.595C82.591 126.595 95.0675 121.764 104.696 112.994C114.258 104.282 120.235 92.4209 121.523 79.5941C121.699 77.8447 123.128 76.524 124.846 76.524H145.247L137.484 84.298C136.616 85.167 136.616 86.5773 137.484 87.4464C137.917 87.8817 138.487 88.0986 139.055 88.0986C139.623 88.0986 140.193 87.8817 140.626 87.4464L152.184 75.8718H152.186Z" fill="white"/>
+</g>
+<g filter="url(#filter2_d_2283_3123)">
+<path d="M141.112 55.9769C141.407 56.1089 141.713 56.1709 142.016 56.1709C142.867 56.1709 143.678 55.6785 144.047 54.8502C151.721 37.6001 168.86 26.4527 187.713 26.4527C206.565 26.4527 223.704 37.5985 231.378 54.8486C231.877 55.972 233.19 56.4758 234.313 55.9769C235.435 55.4763 235.938 54.1605 235.44 53.0372C227.053 34.1827 208.32 22 187.714 22C167.108 22 148.373 34.1827 139.987 53.0372C139.487 54.1605 139.992 55.4763 141.114 55.9769H141.112Z" fill="white"/>
+</g>
+<g filter="url(#filter3_d_2283_3123)">
+<path d="M270.336 75.8715C270.438 75.7688 270.529 75.6563 270.611 75.5356C270.632 75.5047 270.645 75.4704 270.665 75.4378C270.72 75.3449 270.775 75.2536 270.816 75.1525C270.834 75.1068 270.844 75.0595 270.86 75.0139C270.891 74.9226 270.925 74.8329 270.943 74.7367C270.972 74.5932 270.987 74.4449 270.987 74.2965C270.987 74.1481 270.972 73.9998 270.943 73.8563C270.923 73.7601 270.889 73.6704 270.858 73.5791C270.842 73.5334 270.834 73.4862 270.816 73.4405C270.774 73.3411 270.72 73.2481 270.665 73.1552C270.645 73.1242 270.632 73.0883 270.612 73.0574C270.531 72.9367 270.44 72.8242 270.337 72.7215L258.779 61.1469C257.911 60.2779 256.503 60.2779 255.635 61.1469C254.767 62.016 254.767 63.4263 255.635 64.2953L263.398 72.0693H242.998C238.986 72.0693 235.655 75.1117 235.251 79.1454C232.787 103.656 212.351 122.14 187.716 122.14C168.864 122.14 151.724 110.995 144.051 93.7445C143.551 92.6211 142.237 92.1156 141.115 92.6162C139.993 93.1167 139.49 94.4325 139.99 95.5559C148.377 114.409 167.112 126.591 187.716 126.591C200.742 126.591 213.219 121.76 222.848 112.99C232.41 104.279 238.387 92.4173 239.675 79.5906C239.85 77.8411 241.28 76.5204 242.998 76.5204H263.398L255.635 84.2944C254.767 85.1634 254.767 86.5738 255.635 87.4428C256.068 87.8781 256.638 88.095 257.206 88.095C257.775 88.095 258.344 87.8781 258.777 87.4428L270.336 75.8682V75.8715Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_2283_3123" x="235.943" y="-1.52588e-05" width="144.144" height="148.595" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="11"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2283_3123"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2283_3123" result="shape"/>
+</filter>
+<filter id="filter1_d_2283_3123" x="-4.66016" y="0.000656128" width="179.496" height="148.594" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="11"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2283_3123"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2283_3123" result="shape"/>
+</filter>
+<filter id="filter2_d_2283_3123" x="117.794" y="-1.52588e-05" width="139.838" height="78.1709" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="11"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2283_3123"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2283_3123" result="shape"/>
+</filter>
+<filter id="filter3_d_2283_3123" x="117.797" y="38.4952" width="175.19" height="110.096" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="11"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2283_3123"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2283_3123" result="shape"/>
+</filter>
+</defs>
+</svg>
+
+    }
+    & img {
+      position: absolute;
+      top: 0;
+      left: -8px;
+      // filter: drop-shadow(0 0 22px g.$c-white);
+      // object-fit: cover;
+      object-position: left;
+      // width: 875px;
+      // height: 300px;
+      width: 100%;
+      height: 100%;
+      @include g.mq(lg) {
+        left: -4px;
+      }
+    }
+    & > ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(47.2px, 10.66vw, 94.4px);
+      padding-inline: clamp(14.3px, 3.23vw, 28.61px) clamp(12.5px, 2.8vw, 25px);
+      height: 100%;
+      @include g.mq(md) {
+        gap: clamp(38.8px, 10.3467vw, 77.6px);
+        justify-content: space-between;
+        padding-inline: clamp(10.8px, 2.88vw, 21.6px);
+      }
+      & > li {
+        width: clamp(98px, 22.1vw, 196px);
+        @include g.mq(md) {
+          width: clamp(80.5px, 21.467vw, 161px);
+        }
+        & > p {
+          font-size: clamp(1.7rem, 3.84vw, 3.4rem);
+          font-weight: bold;
+          letter-spacing: 0.3em;
+          line-height: 1.47;
+          text-align: center;
+          @include g.mq(md) {
+            font-size: clamp(1.8rem, 4.8vw, 3.6rem);
+            line-height: 1.444;
+            letter-spacing: 0.25em;
+          }
+        }
+      }
+    }
+  }
+  &__flowNote {
+    font-size: 1.7rem;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    text-align: center;
+    // margin-block-start: 42px;
+    font-weight: 500;
+    @include g.mq(md) {
+      font-size: clamp(1.3rem, 3.4667vw, 2.6rem);
+      // margin-block-start: clamp(31.4px, 8.373vw, 62.8px);
+      line-height: 2.6;
+    }
+  }
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    margin-block-start: 177px;
+    @include g.mq(md) {
+      flex-direction: column;
+      margin-block-start: clamp(75px, 20vw, 150px);
+    }
+  }
+  &__tab {
+    border-radius: 5px;
+    width: 50%;
+    height: 67px;
+    box-shadow: 0 0 22px 0 rgba(255, 255, 255, 1),
+      inset 0 0 22px 0 rgba(255, 255, 255, 1);
+    border: 4px solid g.$c-white;
+    font-size: 2.4rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 67px;
+    cursor: pointer;
+    @include g.mq(md) {
+      width: 100%;
+      height: clamp(56px, 14.933vw, 112px);
+      border: clamp(2px, 0.533vw, 4px) solid g.$c-white;
+      font-size: clamp(2rem, 5.33vw, 4rem);
+      line-height: clamp(56px, 14.933vw, 112px);
+      box-shadow: 0 0 11px 0 rgba(255, 255, 255, 1),
+        inset 0 0 11px 0 rgba(255, 255, 255, 1);
+      border-radius: 0;
+      // border-top: clamp(2px, 0.533vw, 4px) solid g.$c-white;
+      // border-bottom: clamp(2px, 0.533vw, 4px) solid g.$c-white;
+    }
+    &:first-of-type {
+      @include g.mq(md) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: clamp(2px, 0.533vw, 4px);
+          box-shadow: 0 0 22px 0 rgba(255, 255, 255, 1),
+            inset 0 0 22px 0 rgba(255, 255, 255, 1);
+          background-color: g.$c-white;
+        }
+      }
+    }
+    &:first-of-type,
+    &:last-of-type {
+      @include g.mq(md) {
+        border: none;
+        box-shadow: none;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: clamp(2px, 0.533vw, 4px);
+          box-shadow: 0 0 22px 0 rgba(255, 255, 255, 1),
+            inset 0 0 22px 0 rgba(255, 255, 255, 1);
+          background-color: g.$c-white;
+        }
+      }
+    }
+    &.is-active {
+      background-color: g.$c-white;
+      color: g.$c-blue;
+    }
+  }
+
+  &__items {
+    display: none;
+    &.is-show {
+      display: block;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-block: 58px;
+    display: flex;
+    gap: 80px;
+    // justify-content: space-between;
+    @include g.mq(md) {
+      padding-block: clamp(33px, 8.799vw, 66px);
+      flex-direction: column;
+      gap: clamp(13px, 3.4667vw, 26px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 833px;
+      width: 100%;
+      height: 4px;
+      background-color: g.$c-white;
+      box-shadow: 0 0 22.68px 0 rgba(255, 255, 255, 1);
+      @include g.mq(md) {
+        width: 100%;
+        height: clamp(2px, 0.533vw, 4px);
+      }
+    }
+    & dt {
+      font-size: 2.6rem;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      line-height: 1.3;
+      max-width: 170px;
+      width: 100%;
+      white-space: nowrap;
+      @include g.mq(md) {
+        font-size: clamp(2.2rem, 5.8667vw, 4.4rem);
+        width: 100%;
+        line-height: 1.6;
+        // padding-inline: 30px;
+        text-align: center;
+        margin-inline: auto;
+      }
+    }
+    & dd {
+      max-width: 580px;
+      font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 1.7;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      @include g.mq(md) {
+        max-width: 100%;
+        font-size: clamp(1.4rem, 3.733vw, 2.8rem);
+        padding-inline: 30px;
+        line-height: 1.857;
+        &.is-center {
+          text-align: center;
+        }
+      }
+      & span.is-note {
+        font-weight: 500;
+      }
+      & > ul {
+        & > li {
+          margin-block-end: 25px;
+          @include g.mq(md) {
+            margin-block-end: 21px;
+          }
+          &:last-child {
+            margin-block-end: 0;
+          }
+          & > span {
+            display: block;
+            &:not(&:first-child) {
+              font-weight: 500;
+            }
+          }
+          & > p {
+            &:not(&:first-child) {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@use "../global" as g;
+
+.l-footer {
+  position: relative;
+  padding-block: clamp(145px, 20.1vw, 290px) clamp(4px, 0.556vw, 8px);
+  @include g.mq(md) {
+    padding-block: 132px 17px;
+  }
+  &__inner {
+    padding-inline: 2.7778vw;
+  }
+  &__slogan {
+    & > img {
+      margin-inline: auto;
+      @include g.mq(md) {
+        width: clamp(235px, 62.6667vw, 470px);
+      }
+    }
+  }
+  &__logo {
+    margin-block-start: 152px;
+    @include g.mq(md) {
+      margin-block-start: clamp(101.6px, 27.0933vw, 203.2px);
+    }
+    & img {
+      margin-inline: auto;
+      @include g.mq(md) {
+        width: clamp(81px, 21.6vw, 162px);
+        height: clamp(35px, 9.33vw, 70px);
+      }
+    }
+  }
+  &__nav {
+    margin-block-start: 41px;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: clamp(25px, 3.4722vw, 50px);
+    margin-left: 4px;
+    &:last-of-type {
+      margin-left: 9px;
+    }
+  }
+  &__item {
+    color: g.$c-white;
+    font-size: clamp(1.3rem, 1.18vw, 1.7rem);
+    letter-spacing: .1em;
+    font-weight: bold;
+    line-height: 2.35;
+    position: relative;
+    &::after {
+        content: '|';
+        position: absolute;
+        right: calc(clamp(15px, 2.0833vw, 30px) * -1);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:last-child {
+        display: flex;
+        align-items: center;
+        gap: clamp(5px, .6944vw, 10px);
+        &::after {
+            content: none;  
+        }
+    }
+  }
+  &__copyright {
+    font-family: g.$novecent-cond-medium;
+    font-size: 1.2rem;
+    color: g.$c-white;
+    text-align: center;
+    line-height: 3;
+    margin-block-start: 17px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    @include g.mq(md) {
+      font-size: 1.1rem;
+      line-height: 2.727;
+      margin-block-start: 21px;
+    }
+  }
+}

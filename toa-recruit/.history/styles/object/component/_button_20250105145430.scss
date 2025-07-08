@@ -1,0 +1,188 @@
+@use "../../global" as g;
+
+.c-button {
+    font-family: g.$novecent-cond-medium;
+    width: 244px;
+    height: 53px;
+    border-radius: 32px;
+    background-color: g.$c-white;
+    position: relative;
+    @include g.mq(md) {
+        height: clamp(33px, 8.799vw, 66px);
+        width: clamp(173px, 46.1333vw, 346px);
+    }
+    & > a {
+        width: 100%;
+        height: 100%;
+        border-radius: 32px;
+        display: block;
+    }
+    & span {
+        font-weight: 500;
+        font-size: 2.6rem;
+        color: g.$c-blue;
+        display: block;
+        text-align: center;
+        line-height: 53px;
+        font-weight: bold;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        @include g.mq(md) {
+            font-size: clamp(1.7rem, 4.533vw, 3.4rem);
+            line-height: clamp(33px, 8.799vw, 66px);
+
+        }
+        &.is-ja {
+            font-size: 2rem;
+            @include g.mq(md) {
+                font-size: clamp(1.2rem, 3.2vw, 2.4rem);
+            }
+        }
+    }
+    & svg {
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 7px;
+        height: 9px;
+        @include g.mq(md) {
+            right: clamp(9.22px, 2.45867vw, 18.44px);
+            width: clamp(5px, 1.33vw, 10px);
+            height: clamp(7px, 1.8667vw, 14px);
+        }
+    }
+    &--blue {
+        background-color: g.$c-blue;
+        position: relative;
+        width: clamp(122px, 16.944vw, 244px);
+        height: clamp(26.5px, 3.68vw, 53px);
+        @include g.mq(md) {
+            width: clamp(149px, 39.733vw, 298px);
+            height: clamp(33.11px, 8.8vw, 66.22px);
+        }
+        & > a {
+            & img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: clamp(39.5px, 5.486111vw, 79px);
+                @include g.mq(md) {
+                    width: clamp(65.23px, );
+                }
+            }
+        }
+        & span {
+            line-height: clamp(26.5px, 3.68vw, 53px);
+            @include g.mq(md) {
+                line-height: clamp(33.11px, 8.8vw, 66.22px);
+            }
+        }
+    }
+    &--entry {
+        @include g.mq(sm) {
+            width: 158.42px;
+            height: 34.23px;
+        }
+        & > a {
+            & > span {
+                font-size: 2rem;
+                font-weight: bold;
+                letter-spacing: .1em;
+                @include g.mq(sm) {
+                    font-size: 1.4rem;
+                    letter-spacing: .05em;
+                }
+            }
+            & > svg {
+                @include g.mq(sm) {
+                    height: 6px;
+                    right: 8.44px;
+                }
+            }
+        }
+    }
+    &--pagination {
+        @include g.mq(sm) {
+            width: 193px;
+            height: 42px;
+        }
+        & > a {
+            & > span {
+                font-size: 2rem;
+                font-weight: bold;
+                letter-spacing: .1em;
+                @include g.mq(sm) {
+                    font-size: 1.2rem;
+                    line-height: 42px;
+                }
+            }
+            & > svg {
+                @include g.mq(sm) {
+                    width: 6px;
+                    height: 8px;
+                    right: 10px;
+                }
+            }
+        }
+    }
+    &--more {
+        display: block;
+        cursor: pointer;
+    }
+    &--other {
+        width: 212px;
+        height: 46px;
+        & span {
+            font-size: 2.2rem;
+            line-height: 46px;
+            font-weight: 400;
+            letter-spacing: 0;
+        }
+        & svg {
+            position: absolute;
+            right: 11.29px;
+            top: 50%;
+            transform: translateY(-50%);
+            @include g.mq(sm) {
+                right: 9.22px;
+                width: 5px;
+                height: 7px;
+            }
+        }
+    }
+    &--drawer {
+        height: 46px;
+        width: clamp(184px, 17.6vw, 254px);
+        @include g.mq(lg) {
+            width: 100%;
+            height: clamp(40px, 10.6667vw, 80px);
+        }
+        &.is-short {
+            width: clamp(171px, 15.347vw, 221px);
+            @include g.mq(lg) {
+                width: 100%;
+            }
+        }
+        & span {
+            font-size: clamp(1.2rem, 1.18vw, 1.7rem);
+            font-weight: bold;
+            letter-spacing: .1em;
+            line-height: 46px;
+            color: g.$c-bg;
+            @include g.mq(lg) {
+                font-size: clamp(1.4rem, 3.7333vw, 2.8rem);
+                line-height: clamp(40px, 10.6667vw, 80px);
+                letter-spacing: .05em;
+            }
+        }
+        & svg {
+            @include g.mq(lg) {
+                width: clamp(7px, 1.8667vw, 14px);
+                height: clamp(9px, 2.4vw, 18px);
+                right: clamp(13px, 3.4667vw, 26px);
+            }
+        }
+    }
+}

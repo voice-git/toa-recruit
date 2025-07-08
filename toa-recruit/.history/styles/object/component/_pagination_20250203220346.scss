@@ -1,0 +1,48 @@
+@use "../../global" as g;
+
+.c-pagination {
+  margin-block-start: 91px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 55px;
+  @include g.mq(md) {
+    margin-block-start: clamp(95px, 25.33vw, 190px);
+    height: clamp(33px, 8.799vw, 66px);
+  }
+  @include g.mq(sm) {
+    // height: 46px;
+    height: clamp(44px, 9.568vw, 88px);
+  }
+  &__button {
+    & a {
+      font-family: g.$novecent-cond-medium;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      letter-spacing: 0.07em;
+      line-height: 1.4;
+      font-weight: bold;
+      & svg {
+        @include g.mq(md) {
+            width: clamp(35.88px, 9.568vw, 71.76px);
+            height: clamp(35.88px, 9.568vw, 71.76px);
+        }
+      }
+    }
+  }
+  &__text {
+    @include g.mq(md) {
+        display: none;
+    }
+  }
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

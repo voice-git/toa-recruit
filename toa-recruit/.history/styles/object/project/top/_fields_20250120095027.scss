@@ -1,0 +1,173 @@
+@use "../../../global" as g;
+
+.p-fields {
+  &__top {
+    padding-block: 31px 173px;
+    background-image: url(../images/top/fields-bg@2x.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include g.mq(md) {
+      padding-block: clamp(19px, 5.0667vw, 38px) clamp(130px, 34.57vw, 260px);
+      background-image: url(../images/top/fields-bg-sp@2x.webp);
+    }
+  }
+  &__slogan {
+    margin-block-start: 180px;
+    padding-inline: 2.777vw;
+    @include g.mq(md) {
+      margin-block-start: clamp(107px, 28.457vw, 214px);
+    }
+    & img {
+      margin-inline: auto;
+      @include g.mq(md) {
+        width: clamp(305.92px, 81.5787vw, 611.84px);
+      }
+    }
+  }
+  &__topButton {
+    margin-block-start: 55px;
+    border-radius: 32px;
+    width: 348.42px;
+    height: 45.77px;
+    margin-inline: auto;
+    @include g.mq(md) {
+      width: clamp(232px, 61.866vw, 464px);
+      height: clamp(35.34px, 6.75733vw, 70.68px);
+      margin-block-start: clamp(32px, 8.533vw, 64px);
+    }
+    & > a {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      text-align: center;
+      border-radius: 32px;
+      line-height: 45.77px;
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: solid 1px g.$c-white;
+      background-color: rgba(255, 255, 255, 0.3);
+      @include g.mq(md) {
+        font-size: clamp(1.4rem, 3.7333vw, 2.8rem);
+        line-height: clamp(35.34px, 6.75733vw, 70.68px);
+      }
+    }
+  }
+  &__content {
+    padding-block: 187px 182px;
+    padding-inline: 2.777vw;
+    @include g.mq(md) {
+      padding-block: clamp(59px, 15.733vw, 118px) clamp(100px, 26.5957vw, 200px);
+      padding-inline: 0;
+    }
+  }
+  &__inner {
+    max-width: 1205px;
+    margin-inline: auto;
+  }
+  &__list {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, minmax(0, 375px));
+    column-gap: 18px;
+    row-gap: 115px;
+    @include g.mq(md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding-inline: 6px;
+      column-gap: 0;
+      row-gap: 69.8px;
+    }
+  }
+  &__item {
+    text-align: center;
+    position: relative;
+  }
+  &__itemTitle {
+    & > h3 {
+      font-family: g.$a-otf-futo-go-b101-pro;
+      font-size: clamp(4.3rem, 5.9722vw, 8.6rem);
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      line-height: 1.1;
+      white-space: nowrap;
+      @include g.mq(md) {
+        font-size: clamp(3rem, 10.6667vw, 8rem);
+        line-height: 1.14;
+      }
+    }
+  }
+  &__field {
+    position: absolute;
+    left: 50%;
+    top: clamp(26.5px, 3.68vw, 53px);
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: clamp(178px, 24.7vw, 356px);
+    @include g.mq(md) {
+      top: clamp(18px, 4.787vw, 36px);
+      max-width: clamp(176px, 46.8vw, 352px);
+    }
+    & img {
+      @include g.mq(md) {
+        margin-inline: auto;
+        width: 100%;
+      }
+    }
+  }
+  &__itemText {
+    margin-block-start: clamp(29.5px, 4.09vw, 59px);
+    @include g.mq(md) {
+      margin-block-start: clamp(26.6px, 7.093vw, 53.2px);
+    }
+    & > p {
+      font-size: clamp(1.3rem, 1.1111vw, 1.6rem);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 1.8125;
+      @include g.mq(md) {
+        font-size: clamp(1.2rem, 3.2vw, 2.4rem);
+        letter-spacing: 0.02em;
+        line-height: 1.8333;
+      }
+    }
+  }
+  &__itemButton {
+    position: relative;
+    margin-inline: auto;
+    width: 151.9px;
+    height: 33px;
+    margin-block-start: clamp(11.5px, 1.59722vw, 23px);
+    @include g.mq(md) {
+      width: clamp(84px, 22.4vw, 168px);
+      height: clamp(25px, 6.66667vw, 50px);
+      margin-block-start: clamp(11px, 2.9255vw, 22px);
+    }
+    font-family: g.$novecent-cond-medium;
+    display: block;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: solid 1px g.$c-white;
+    font-size: 1.6rem;
+    line-height: 33px;
+    @include g.mq(md) {
+      border-radius: 31.8px;
+      font-size: clamp(1.4rem, 3.733vw, 2.8rem);
+      line-height: clamp(25px, 6.66667vw, 50px);
+    }
+    & > svg {
+      transform: translateY(-50%);
+      top: 50%;
+      right: 8px;
+      position: absolute;
+    }
+  }
+  &__button {
+    margin-inline: auto;
+    margin-block-start: 132px;
+
+    @include g.mq(md) {
+      margin-block-start: clamp(61px, 16.22vw, 122px);
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@use "../../../global" as g;
+
+.p-job {
+    &__container {
+        background-image: url(../images/job/job-category-bg-pc@2x.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-block: 192px 127px;
+    }
+    &__title {
+
+    }
+    &__content {
+        padding-inline: 2.777vw;
+        padding-block: 136px 119px;
+    }
+    &__inner {
+        max-width: 1217px;
+        margin-inline: auto;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    &__item {
+        background-color: g.$c-white;
+        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, .75);
+    }
+    &__itemImage {
+        & img {
+
+        }
+    }
+    &__itemTexts {
+        color: g.$c-blue;
+        & span {
+            & svg {
+
+            }
+        }
+    }
+    &__itemTitle {
+        & h3 {
+            font-family: g.$a-otf-futo-go-b101-pro;
+            font-size: 3.2rem;
+            font-weight: bold;
+            letter-spacing: .05em;
+            line-height: 1.96875;
+            & span {
+                ff
+            }
+        }
+    }
+    &__text {
+        & p {
+
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@use "../../global" as g;
+
+.p-mv {
+  background-image: url(../images/top/mv-bg-pc@2x.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  @include g.mq(md) {
+    // background-image: url(../images/top/mv-bg-sp@2x.webp);
+  }
+}

@@ -1,0 +1,126 @@
+@use "../../global" as g;
+
+.c-title {
+  // color: g.$c-white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  @include g.mq(sm) {
+    gap: 10px;
+  }
+  & > h2 {
+    font-family: g.$novecent-cond-medium;
+    font-size: 4.2rem;
+    line-height: 2.2857;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 400;
+    @include g.mq(sm) {
+      font-size: 1.8rem;
+      line-height: 1.6667;
+    }
+  }
+
+  &__bar {
+    height: 14px;
+    @include g.mq(sm) {
+      height: 7.71px;
+    }
+    // &.is-show {
+    //   & > img {
+    //     width: 100%;
+    //   }
+    // }
+    &--news {
+      @include g.mq(sm) {
+        height: 14px;
+      }
+    }
+    & > img {
+      // filter: drop-shadow(0px 0px 22.68px rgba(255, 255, 255, 1));
+      filter: drop-shadow(0px 0px 11.34px rgba(255, 255, 255, 1));
+      width: 0%;
+      height: 100%;
+      // transition: width 1s;
+      transition: none; // GSAP が制御するので CSS トランジションは不要
+      object-fit: cover;
+    }
+  }
+  &--blue {
+    color: g.$c-blue;
+    & img {
+      filter: none;
+    }
+  }
+  &--main {
+    font-size: 10rem;
+    line-height: 0.96;
+    font-weight: bold;
+    letter-spacing: 0.09em;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    @include g.mq(md) {
+      font-size: 5.6rem;
+      line-height: 1.7;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+    & > span {
+      display: block;
+      font-size: 3.2rem;
+      line-height: 3;
+      margin-block-start: 1px;
+      @include g.mq(md) {
+        font-size: 2rem;
+        line-height: 4.8;
+        margin-block-start: -19px;
+        letter-spacing: 0.09em;
+      }
+    }
+  }
+  &--item {
+    & .c-title__bar {
+      height: 14px;
+      @include g.mq(sm) {
+        height: 7.71px;
+      }
+    }
+    & h3 {
+      font-size: 2.6rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      line-height: 3.46;
+      white-space: nowrap;
+      @include g.mq(md) {
+        font-size: 1.6rem;
+        line-height: 1.875;
+      }
+    }
+  }
+  &--data {
+    & > h2 {
+      font-size: 12.4rem;
+      font-weight: 400;
+      line-height: 0.774;
+      @include g.mq(md) {
+        font-size: 7rem;
+        line-height: 1.3714;
+      }
+    }
+  }
+  &--news {
+    & > h2 {
+      font-size: 10.4rem;
+      font-weight: 400;
+      line-height: 0.923;
+      @include g.mq(sm) {
+        font-size: 7rem;
+        line-height: 1.3714;
+      }
+    }
+  }
+}

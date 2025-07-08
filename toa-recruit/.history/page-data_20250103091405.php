@@ -1,0 +1,104 @@
+<?php get_header(); ?>
+<main>
+    <section class="p-data">
+        <!-- <div class="p-data__title c-title c-title--data">
+            <div class="c-title__bar c-title__bar--news js-bar-first">
+                <img src="<?php echo theme_url('images/common/bar-white.svg'); ?>" alt="">
+            </div>
+            <h2>TOA Data</h2>
+            <div class="c-title__bar c-title__bar--news js-bar-last">
+                <img src="<?php echo theme_url('images/common/bar-white.svg'); ?>" alt="">
+            </div>
+        </div> -->
+        <!-- <div class="p-data__text">
+            <p>数字で見るTOA</p>
+        </div> -->
+        <div class="p-data__container">
+            <h2 class="p-data__title c-title c-title--main">
+                TOA Data
+                <span>数字で見るTOA</span>
+            </h2>
+        </div>
+        <div class="p-data__inner">
+            <div class="p-data__boxWrapper">
+                <div class="p-data__box">
+                    <div class="p-data__item">
+                        <h3 class="p-data__itemTitle">売上</h3>
+                        <div class="p-data__itemContentWrapper">
+                            <div class="p-data__itemContent">
+                                <div class="p-data__itemText">
+                                    <p>1,229<span>億円</span></p>
+                                </div>
+                                <div class="p-data__itemNote">
+                                    <p>2023年度実績</p>
+                                </div>
+                            </div>
+                            <div class="p-data__itemContent">
+                                <div class="p-data__itemText">
+                                    <p><span>昨年比</span>126<span class="has-space">%</span></p>
+                                </div>
+                                <div class="p-data__itemNote">
+                                    <p>2022年度売上 976億円</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-data__text">
+                    <p>右肩上がりで成長中！</p>
+                </div>
+            </div>
+
+            <div class="p-data__wrapper">
+                <div class="p-data__boxWrapper">
+                    <div class="p-data__box">
+                        <div class="p-data__item">
+                            <h3 class="p-data__itemTitle">育休取得率</h3>
+                            <div class="p-data__itemContentWrapper">
+                                <div class="p-data__itemContent">
+                                    <div class="p-data__itemText">
+                                        <p><span>男性</span>50<span class="has-space">%</span></p>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemContent">
+                                    <div class="p-data__itemText">
+                                        <p><span>女性</span>100<span class="has-space">%</span></p>
+                                    </div>
+                                </div>
+                                .p-data__
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-data__text">
+                        <p>右肩上がりで成長中！</p>
+                    </div>
+                </div>
+
+                <div class="p-data__boxWrapper">
+                    <div class="p-data__box">
+                        <div class="p-data__item">
+                            <h3 class="p-data__itemTitle">売上</h3>
+                            <div class="p-data__itemContentWrapper">
+                                <div class="p-data__itemContent">
+                                    <div class="p-data__itemText">
+                                        <p>1,229<span>億円</span></p>
+                                    </div>
+                                    <div class="p-data__itemNote">
+                                        <p>2023年度実績</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-data__text">
+                        <p>右肩上がりで成長中！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.p-data -->
+
+    <?php get_template_part('parts/section-other-contents'); ?>
+</main>
+<?php get_footer(); ?>

@@ -1,0 +1,177 @@
+@use "../global" as g;
+
+@media (min-width: 769px) {
+  body.page .l-other-contents__title,
+  body.single .l-other-contents__title,
+  body.archive .l-other-contents__title {
+    display: none;
+  }
+}
+.l-other-contents {
+  // background-color: g.$c-bg;
+  // padding-block-start: 108px;
+  &--second {
+    padding-block: 0 197px;
+    @include g.mq(sm) {
+      padding-block: 0 75px;
+    }
+  }
+  &__title {
+    margin-block-end: 81px;
+    @include g.mq(sm) {
+      margin-block-end: 27px;
+    }
+  }
+  &__inner {
+    // padding-inline: 3.472vw 3.4vw;
+    padding-inline: 2.7778vw;
+    @include g.mq(sm) {
+      // max-width: ;
+      padding-inline: 31px 29.24px;
+    }
+    &--second {
+      padding-inline: 0;
+      @include g.mq(sm) {
+        padding-inline: 30px;
+      }
+    }
+  }
+  &__list {
+    max-width: 1440px;
+    margin-inline: auto;
+    &--second {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      @include g.mq(sm) {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+  &__item {
+    // background-image: url(../images/common/faq-bg@2x.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: clamp(306px, 42.5vw, 612px);
+    margin-block-end: clamp(12.5px, 1.73611vw, 25px);
+    max-width: 1338px;
+    width: 100%;
+    margin-inline: auto;
+    @include g.mq(sm) {
+      // background-image: url(../images/common/faq-bg-sp@2x.jpg);
+      height: 315.76px;
+      max-width: 100%;
+      margin-block-end: 10px;
+      position: relative;
+    }
+    &:first-child {
+      background-image: url(../images/common/faq-bg@2x.jpg);
+      @include g.mq(sm) {
+        background-image: url(../images/common/faq-bg-sp@2x.jpg);
+      }
+    }
+    &:nth-child(2) {
+      background-image: url(../images/common/toa-data-bg-pc@2x.jpg);
+      @include g.mq(sm) {
+        background-image: url(../images/common/toa-data-bg-sp@2x.jpg);
+      }
+    }
+    &:last-child {
+      background-image: url(../images/common/guideline-bg-pc@2x.jpg);
+      margin-block-end: 0;
+      @include g.mq(sm) {
+        background-image: url(../images/common/guideline-bg-sp@2x.jpg);
+      }
+    }
+    &--second {
+      max-height: 472px;
+      max-width: 472px;
+      margin-block-end: 0;
+      position: relative;
+      @include g.mq(sm) {
+        width: 100%;
+        height: 100vw;
+      }
+    }
+    & > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__itemTitle {
+    font-weight: 400;
+    font-family: g.$novecent-cond-medium;
+    font-size: clamp(5.2rem, 7.222vw, 10.4rem);
+    color: g.$c-white;
+    line-height: 0.923;
+    // line-height: 1;
+    padding-block-start: clamp(129px, 17.9vw, 258px);
+    padding-inline-start: clamp(40px, 5.5555vw, 80px);
+    @include g.mq(sm) {
+      font-size: 5rem;
+      line-height: 1;
+      // text-align: center;
+      padding-block-start: 0;
+      padding-inline-start: 0;
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      white-space: nowrap;
+    }
+    & > span {
+      font-family: g.$a-otf-futo-go-b101-pro;
+      font-weight: bold;
+      font-size: clamp(2.1rem, 2.9vw, 4.2rem);
+      letter-spacing: 0.09em;
+      line-height: 2.286;
+      display: block;
+      @include g.mq(sm) {
+        font-size: 1.6rem;
+        letter-spacing: 0.08em;
+        line-height: 1.5625;
+        margin-block-start: 5px;
+      }
+    }
+    &--second {
+      font-size: clamp(35.5px, 4.93vw, 7.1rem);
+      line-height: 1.3521;
+      padding-block-start: 0px;
+      padding-inline-start: 0px;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      @include g.mq(sm) {
+        font-size: 4rem;
+        line-height: 1.25;
+        top: 50%;
+      }
+      & > span {
+        font-size: clamp(1.6rem, 1.59722vw, 2.3rem);
+        line-height: 4.17;
+        margin-block-start: -25px;
+        @include g.mq(sm) {
+          font-size: 1.6rem;
+          line-height: 1.5625;
+          letter-spacing: 0.08em;
+          margin-block-start: 4px;
+        }
+      }
+    }
+  }
+  &__circle {
+    border-radius: 50%;
+    border: solid 1px g.$c-white;
+    @include g.mq(sm) {
+      width: 35px;
+      height: 35px;
+    }
+    & 
+  }
+}

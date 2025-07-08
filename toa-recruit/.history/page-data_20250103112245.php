@@ -1,0 +1,261 @@
+<?php get_header(); ?>
+<main>
+    <section class="p-data">
+        <!-- <div class="p-data__title c-title c-title--data">
+            <div class="c-title__bar c-title__bar--news js-bar-first">
+                <img src="<?php echo theme_url('images/common/bar-white.svg'); ?>" alt="">
+            </div>
+            <h2>TOA Data</h2>
+            <div class="c-title__bar c-title__bar--news js-bar-last">
+                <img src="<?php echo theme_url('images/common/bar-white.svg'); ?>" alt="">
+            </div>
+        </div> -->
+        <!-- <div class="p-data__text">
+            <p>数字で見るTOA</p>
+        </div> -->
+        <div class="p-data__container">
+            <h2 class="p-data__title c-title c-title--main">
+                TOA Data
+                <span>数字で見るTOA</span>
+            </h2>
+        </div>
+        <div class="p-data__outer">
+            <div class="p-data__inner">
+                <div class="p-data__boxWrapper">
+                    <div class="p-data__box">
+                        <div class="p-data__item">
+                            <h3 class="p-data__itemTitle">売上</h3>
+                            <div class="p-data__itemContentWrapper">
+                                <div class="p-data__itemContent">
+                                    <div class="p-data__itemText">
+                                        <p>1,229<span>億円</span></p>
+                                    </div>
+                                    <div class="p-data__itemNote">
+                                        <p>2023年度実績</p>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemContent">
+                                    <div class="p-data__itemText">
+                                        <p><span>昨年比</span>126<span class="has-space">%</span></p>
+                                    </div>
+                                    <div class="p-data__itemNote">
+                                        <p>2022年度売上 976億円</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-data__text">
+                        <p>右肩上がりで成長中！</p>
+                    </div>
+                </div>
+
+                <div class="p-data__wrapper">
+                    <div class="p-data__boxWrapper">
+                        <div class="p-data__box">
+                            <div class="p-data__item p-data__item--childcare">
+                                <h3 class="p-data__itemTitle">育休取得率</h3>
+                                <div class="p-data__itemContentWrapper p-data__itemContentWrapper--small">
+                                    <div class="p-data__itemContent">
+                                        <div class="p-data__itemText p-data__itemText--small">
+                                            <p><span class="has-space has-space--left">男性</span>50<span class="has-space">%</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="p-data__itemContent">
+                                        <div class="p-data__itemText p-data__itemText--small">
+                                            <p><span>女性</span>100<span class="has-space">%</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemNote p-data__itemNote--center">
+                                    <p>取得人数/対象人数　男性：10名/20名　女性：5名/5名</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-data__text">
+                            <p>お互いを認め合うことのできる職場環境のため取得がしやすいです</p>
+                        </div>
+                    </div>
+
+                    <div class="p-data__boxWrapper">
+                        <div class="p-data__box">
+                            <div class="p-data__item p-data__item--single">
+                                <h3 class="p-data__itemTitle">育休取得後の復帰率</h3>
+                                <div class="p-data__itemContentWrapper p-data__itemContentWrapper--single p-data__itemContentWrapper--small">
+                                    <div class="p-data__itemContent">
+                                        <div class="p-data__itemText p-data__itemText--small">
+                                            <p>100<span class="has-space">%</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemNote p-data__itemNote--center">
+                                    <p>時短勤務・時差勤務制度</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-data__text">
+                            <p>育児との両立を支援します</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-data__wrapper p-data__wrapper--center">
+                    <div class="p-data__boxWrapper">
+                        <div class="p-data__box">
+                            <div class="p-data__item">
+                                <h3 class="p-data__itemTitle">有給取得率</h3>
+                                <div class="p-data__itemContentWrapper p-data__itemContentWrapper--single">
+                                    <div class="p-data__itemContent">
+                                        <div class="p-data__itemText">
+                                            <p>15.0<span class="has-space">日</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemNote p-data__itemNote--center is-fourth">
+                                    <p>2023年度実績</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-data__text">
+                            <p>1ヵ月に1日取得することを推奨しています</p>
+                        </div>
+                    </div>
+
+                    <div class="p-data__boxWrapper">
+                        <div class="p-data__box">
+                            <div class="p-data__item p-data__item--single">
+                                <h3 class="p-data__itemTitle">過去3年以内の新卒離職率</h3>
+                                <div class="p-data__itemContentWrapper p-data__itemContentWrapper--single">
+                                    <div class="p-data__itemContent">
+                                        <div class="p-data__itemText">
+                                            <p>13<span class="has-space">%</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemNote p-data__itemNote--center is-fifth">
+                                    <p>2022年～2024年新卒入社対象</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-data__text">
+                            <p>人事による新入社員へのヒアリングで不安を払拭</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-data__wrapper p-data__wrapper--left">
+                    <div class="p-data__boxWrapper">
+                        <div class="p-data__box">
+                            <div class="p-data__item">
+                                <h3 class="p-data__itemTitle">創立</h3>
+                                <div class="p-data__itemContentWrapper p-data__itemContentWrapper--single">
+                                    <div class="p-data__itemContent">
+                                        <div class="p-data__itemText">
+                                            <p>1949<span class="has-space">年</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemNote p-data__itemNote--center is-fourth">
+                                    <p>設立は1960年</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-data__text">
+                            <p>創立から約80年の安定した経営</p>
+                        </div>
+                    </div>
+
+                    <div class="p-data__boxWrapper">
+                        <div class="p-data__box">
+                            <div class="p-data__item p-data__item--single">
+                                <h3 class="p-data__itemTitle">直近の女性採用率</h3>
+                                <div class="p-data__itemContentWrapper p-data__itemContentWrapper--single">
+                                    <div class="p-data__itemContent">
+                                        <div class="p-data__itemText">
+                                            <p class="p-data__year">2022年</p>
+                                            <p>9<span class="has-space">%</span></p>
+                                        </div>
+                                        <div class="p-data__itemText">
+                                            <p class="p-data__year">2023年</p>
+                                            <p>16<span class="has-space">%</span></p>
+                                        </div>
+                                        <div class="p-data__itemText">
+                                            <p class="p-data__year">2024年</p>
+                                            <p>27<span class="has-space">%</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemNote p-data__itemNote--center is-fifth">
+                                    <p>32名中3名 / 38名中6名 / 30名中8名</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-data__text">
+                            <p>職種問わず様々な部署で活躍できる場があります</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-data__wrapper p-data__wrapper--three">
+                    <div class="p-data__boxWrapper">
+                        <div class="p-data__box">
+                            <div class="p-data__item">
+                                <h3 class="p-data__itemTitle">平均年齢</h3>
+                                <div class="p-data__itemContentWrapper p-data__itemContentWrapper--single">
+                                    <div class="p-data__itemContent">
+                                        <div class="p-data__itemText">
+                                            <p>39.5<span class="has-space">歳</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemNote p-data__itemNote--center is-fourth">
+                                    <p>2023年度実績</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-data__boxWrapper">
+                        <div class="p-data__box">
+                            <div class="p-data__item">
+                                <h3 class="p-data__itemTitle">平均年齢</h3>
+                                <div class="p-data__itemContentWrapper p-data__itemContentWrapper--single">
+                                    <div class="p-data__itemContent">
+                                        <div class="p-data__itemText">
+                                            <p>39.5<span class="has-space">歳</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemNote p-data__itemNote--center is-fourth">
+                                    <p>2023年度実績</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-data__boxWrapper">
+                        <div class="p-data__box">
+                            <div class="p-data__item">
+                                <h3 class="p-data__itemTitle">平均年齢</h3>
+                                <div class="p-data__itemContentWrapper p-data__itemContentWrapper--single">
+                                    <div class="p-data__itemContent">
+                                        <div class="p-data__itemText">
+                                            <p>39.5<span class="has-space">歳</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-data__itemNote p-data__itemNote--center is-fourth">
+                                    <p>2023年度実績</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.p-data -->
+
+    <?php get_template_part('parts/section-other-contents'); ?>
+</main>
+<?php get_footer(); ?>

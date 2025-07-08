@@ -1,0 +1,34 @@
+@use "../../global" as g;
+
+.c-not {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 39.48px;
+    object-position: left;
+    object-fit: cover;
+    transform: translateZ(0);
+    @include g.mq(xl) {
+        transform: translateY(-50%) scaleX(.9);
+    }
+    @include g.mq(lg) {
+        transform: translateY(-50%) scaleX(.75);
+    }
+    @include g.mq(md) {
+        transform: translateY(-50%);
+    }
+}
+
+
+// /* コンテナの設定 */
+// .svg-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+//     height: 100vh;
+//     // background-color: black; /* 背景色 */
+//     overflow: hidden;
+// }

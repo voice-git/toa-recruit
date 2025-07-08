@@ -1,0 +1,80 @@
+<?php get_header(); ?>
+<main>
+    <section class="p-job-detail">
+        <div class="p-job-detail__title c-title c-title--news">
+            <div class="p-job-detail__image">
+                <?php
+                $job_icon = get_field('job_icon'); // ACF のフィールドから値を取得
+                if ($job_icon && is_array($job_icon)) : // 配列形式か確認
+                    echo '<img src="' . esc_url($job_icon['url']) . '" alt="' . esc_attr($job_icon['alt']) . '">';
+                endif;
+                ?>
+            </div>
+            <div class="c-title__bar c-title__bar--news js-bar-first">
+                <img src="<?php echo theme_url('images/common/bar-white.svg'); ?>" alt="">
+            </div>
+            <h2>
+                <?php the_field('job_title'); ?>
+                <span>
+                    <?php the_field('job_english_title'); ?>
+                </span>
+            </h2>
+            <div class="c-title__bar c-title__bar--news js-bar-last">
+                <img src="<?php echo theme_url('images/common/bar-white.svg'); ?>" alt="">
+            </div>
+        </div>
+        <div class="p-job-detail__inner c-inner">
+            <p>
+                <?php the_field('job_description'); ?>
+            </p>
+
+            <div class="p-job-detail__list">
+                <ul>
+                    <li>
+                        生産ライン・ロボットの開発・設計
+                    </li>
+                    <li>
+                        生産ライン・ロボットの開発・設計
+                    </li>
+                    <li>
+                        生産ライン・ロボットの開発・設計
+                    </li>
+                    <li>
+                        生産ライン・ロボットの開発・設計
+                    </li>
+                </ul>
+            </div>
+
+            <div class="p-job-detail__content">
+                <ul>
+                    <li>
+                        <div>
+                            <?php
+                            $job_image_url = get_field('job_detail_image01'); // フィールドからURLを取得
+
+                            if ($job_image_url) : // URLが存在する場合
+                            ?>
+                                <div class="p-job__itemImage">
+                                    <img src="<?php echo esc_url($job_image_url); ?>" alt="職種画像">
+                                </div>
+                            <?php endif; ?>
+                            <!-- <img src="" alt=""> -->
+                        </div>
+                        <div>
+                            <h3>
+                                <?php the_field('job_detail_headline01'); ?>
+                            </h3>
+                            <p>
+                            <?php the_field('job_detail_headline01'); ?>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- /.p-job-detail -->
+
+
+</main>
+<?php get_footer(); ?>

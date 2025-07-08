@@ -1,0 +1,47 @@
+@use "../../global" as g;
+
+.u-sp-only {
+  display: none;
+}
+.u-tb-sp-only {
+  display: none;
+}
+.u-sp-pc-only {
+  display: none;
+}
+
+@include g.mq(xl) {
+  .u-xl-sp-only {
+    
+  }
+  .u-xl-pc-only {
+
+  }
+}
+@include g.mq(lg) {
+  .u-pc-sp-only {
+    display: none;
+  }
+  .u-sp-pc-only {
+    display: block;
+  }
+}
+@include g.mq(md) {
+  .u-pc-tb-only {
+    display: none !important;
+  }
+  .u-tb-sp-only {
+    display: block;
+    &--inline {
+      display: inline;
+    }
+  }
+}
+@include g.mq(sm) {
+  .u-pc-only {
+    display: none;
+  }
+  .u-sp-only {
+    display: block;
+  }
+}

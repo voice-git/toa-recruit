@@ -1,0 +1,39 @@
+@use "../../../global" as g;
+
+.p-job-detail {
+    &__title {
+
+    }
+    &__image {
+
+    }
+    &__inner {
+
+    }
+    &__list {
+        & ul {
+            & li {
+
+            }
+        }
+    }
+    &__content {
+        & ul {
+            & li {
+                & div {
+                    display: flex;
+
+                }
+                & img {
+
+                }
+                & h3 {
+
+                }
+                & p {
+                    font-size: clamp();
+                }
+            }
+        }
+    }
+}

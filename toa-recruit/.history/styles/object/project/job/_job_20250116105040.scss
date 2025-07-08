@@ -1,0 +1,38 @@
+@use "../../../global" as g;
+
+.p-job {
+  &__container {
+    background-image: url(../images/job/job-category-bg-pc@2x.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-block: 192px 127px;
+    @include g.mq(md) {
+      background-image: url(../images/job/job-category-bg-sp@2x.webp);
+      padding-block: clamp(127px, 33.77vw, 254px) clamp(102px, 27vw, 204px);
+    }
+  }
+  &__content {
+    padding-inline: 2.777vw;
+    padding-block: 136px 119px;
+    @include g.mq(md) {
+      padding-block: 52px 65px;
+      padding-inline: 34px;
+    }
+  }
+  &__inner {
+    max-width: 1217px;
+    margin-inline: auto;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(12.5px, 1.736vw, 25px);
+    @include g.mq(md) {
+      grid-template-columns: 1fr;
+      gap: clamp(15px, 3.989vw, 30px);
+    }
+  }
+
+
+}

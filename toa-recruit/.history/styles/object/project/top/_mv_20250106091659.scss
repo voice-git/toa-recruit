@@ -1,0 +1,72 @@
+@use "../../../global" as g;
+
+.p-mv {
+  background-image: url(../images/top/mv-bg-pc@2x.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  // padding-inline: 4.365vw;
+  @include g.mq(sm) {
+    background-image: url(../images/top/mv-bg-sp@2x.webp);
+  }
+  &__label {
+    position: absolute;
+    top: 44.5%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    max-width: 965px;
+    width: 100%;
+    @include g.mq(lg) {
+      max-width: 95%;
+    }
+    @include g.mq(sm) {
+      max-width: clamp(339px, 90.4vw, 678px);
+      // width: 100%;
+      top: 50%;
+      left: 50%;
+    }
+    & > img {
+      margin-inline: auto;
+    }
+    & > p {
+      @include g.mq(sm) {
+        font-size: clamp(2.7rem, 7.199vw, 5.4rem);
+        // font-size: max(7.1vw, 2.7rem);
+        font-weight: bold;
+        letter-spacing: -0.05em;
+        line-height: 2.96;
+        text-align: center;
+      }
+    }
+    & > svg {
+      // max-width: 228px;
+      max-width: 965px;
+      width: 100%;
+      height: auto;
+      @include g.mq(sm) {
+        max-width: clamp(339px, 90.4vw, 678px);
+      }
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      //   width: 100%;
+    }
+  }
+  &__slogan {
+    position: absolute;
+    bottom: 49px;
+    padding-inline: 2.7778vw;
+    // left: 50%;
+    // transform: translateX(-50%);
+    @include g.mq(sm) {
+      bottom: 22px;
+    }
+  }
+}

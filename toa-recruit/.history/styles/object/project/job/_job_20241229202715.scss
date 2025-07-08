@@ -1,0 +1,53 @@
+@use "../../../global" as g;
+
+.p-job {
+    &__container {
+        background-image: url(../images/job/job-category-bg-pc@2x.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-block: 192px 127px;
+    }
+    &__title {
+
+    }
+    &__content {
+        padding-inline: 2.777vw;
+    }
+    &__inner {
+        max-width: 1217px;
+        margin-inline: auto;
+    }
+    &__list {
+
+    }
+    &__item {
+        background-color: g.$c-white;
+        border-radius: 5px;
+        box-shadow: 0 0 20px rbga(255 255 255);
+    }
+    &__itemImage {
+        & img {
+
+        }
+    }
+    &__itemTexts {
+        & span {
+            & svg {
+
+            }
+        }
+    }
+    &__itemTitle {
+        & h3 {
+            & span {
+
+            }
+        }
+    }
+    &__text {
+        & p {
+
+        }
+    }
+}

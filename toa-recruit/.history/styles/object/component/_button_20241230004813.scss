@@ -1,0 +1,124 @@
+@use "../../global" as g;
+
+.c-button {
+    font-family: g.$novecent-cond-medium;
+    width: 244px;
+    height: 53px;
+    border-radius: 32px;
+    background-color: g.$c-white;
+    position: relative;
+    @include g.mq(sm) {
+        height: 33px;
+        width: 173px;
+    }
+    & > a {
+        width: 100%;
+        height: 100%;
+        border-radius: 32px;
+        display: block;
+    }
+    & span {
+        font-weight: 500;
+        font-size: 2.6rem;
+        color: g.$c-blue;
+        display: block;
+        text-align: center;
+        line-height: 53px;
+        font-weight: bold;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        @include g.mq(sm) {
+            font-size: 1.7rem;
+            line-height: 33px;
+        }
+        &.is-ja {
+            font-size: 2rem;
+            @include g.mq(sm) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    & svg {
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        wid
+        @include g.mq(sm) {
+            right: 9.22px;
+            width: 5px;
+            height: 7px;
+
+            <svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 4.5L0.25 8.39711L0.25 0.602885L7 4.5Z" fill="#3F6EB4"/>
+</svg>
+
+        }
+    }
+    &--blue {
+        background-color: g.$c-blue;
+        position: relative;
+        @include g.mq(md) {
+            width: 149px;
+        }
+        & > a {
+            & img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &--entry {
+        @include g.mq(sm) {
+            width: 158.42px;
+            height: 34.23px;
+        }
+        & > a {
+            & > span {
+                font-size: 2rem;
+                font-weight: bold;
+                letter-spacing: .1em;
+                @include g.mq(sm) {
+                    font-size: 1.4rem;
+                    letter-spacing: .05em;
+                }
+            }
+            & > svg {
+                @include g.mq(sm) {
+                    height: 6px;
+                    right: 8.44px;
+                }
+            }
+        }
+    }
+    &--pagination {
+        @include g.mq(sm) {
+            width: 193px;
+            height: 42px;
+        }
+        & > a {
+            & > span {
+                font-size: 2rem;
+                font-weight: bold;
+                letter-spacing: .1em;
+                @include g.mq(sm) {
+                    font-size: 1.2rem;
+                    line-height: 42px;
+                }
+            }
+            & > svg {
+                @include g.mq(sm) {
+                    width: 6px;
+                    height: 8px;
+                    right: 10px;
+                }
+            }
+        }
+    }
+    &--more {
+        display: block;
+        cursor: pointer;
+    }
+}

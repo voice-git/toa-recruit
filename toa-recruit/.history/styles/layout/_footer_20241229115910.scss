@@ -1,0 +1,77 @@
+@use "../global" as g;
+
+.l-footer {
+  // background-color: g.$c-bg;
+  @include g.mq(md) {
+    padding-block: 131px 17px;
+  }
+  &__inner {
+    padding-inline: 2.7778vw;
+  }
+  &__slogan {
+    & > img {
+      margin-inline: auto;
+      @include g.mq(sm) {
+        // width: 242.33px;
+        // height: 63px;
+      }
+    }
+  }
+  &__logo {
+    margin-block-start: 77.5px;
+    @include g.mq(sm) {
+      margin-block-start: 101.6px;
+    }
+    & img {
+      margin-inline: auto;
+      @include g.mq(sm) {
+        width: 81px;
+        height: 35px;
+      }
+    }
+  }
+  &__nav {
+    margin-block-start: 113.6px;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    // gap: 50px;
+    gap: clamp(25px, 3.4722vw, 50px);
+  }
+  &__item {
+    color: g.$c-white;
+    font-size: clamp(1.3rem, 1.18vw, 1.7rem);
+    letter-spacing: .1em;
+    font-weight: bold;
+    line-height: 2.35;
+    position: relative;
+    &::after {
+        content: '|';
+        position: absolute;
+        right: calc(clamp(12.5px, 1.736111vw, 25px) * -1);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:last-child {
+        display: flex;
+        align-items: center;
+        gap: clamp(5px, .6944vw, 10px);
+        &::after {
+            content: none;  
+        }
+    }
+  }
+  &__copyright {
+    font-size: 1.2rem;
+    color: g.$c-white;
+    text-align: center;
+    line-height: 8;
+    margin-block-start: -20px;
+    @include g.mq(lg) {
+      font-size: 1.1rem;
+      line-height: 2.;
+      margin-block-start: 21px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+// Top Page
+@use "top/mv";
+@use "top/about";
+@use "top/news";
+@use "top/staff";
+@use "top/features";
+@use "top/top-message";
+@use "top/modal";
+@use "top/fields";
+
+// Interview Page
+@use "interview/interview";
+
+// Message Page
+@use "message/message";
+
+// Data Page
+@use "data/data";
+
+// Guideline Page
+@use "guideline/guideline";
+
+// FAQ Page
+@use "faq/faq";
+
+// News list Page
+@use "news/news-list";
+
+// Nes Detail Page
+@use "news/news-details";
+
+
+@use "job/job";
+@use "job/job-detail";
+@use "job/other-jobs";

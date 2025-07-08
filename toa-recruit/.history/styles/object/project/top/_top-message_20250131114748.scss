@@ -1,0 +1,96 @@
+@use "../../../global" as g;
+
+.p-top-message {
+  padding-block-end: 188px;
+  @include g.mq(md) {
+    padding-block-end: 110px;
+  }
+  &__title {
+    margin-block-end: -27px;
+    @include g.mq(md) {
+      margin-block-end: 4px;
+    }
+    & h2 {
+      line-height: 2.47;
+    }
+  }
+  &__wrapper {
+    max-width: 100%;
+    margin-inline: auto;
+    background-image: url(../images/top/message-bg-pc@2x.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-block: 155px 111px;
+    padding-inline: 2.7778vw;
+    @include g.mq(md) {
+      background-image: url(../images/top/top-message-bg-sp@2x.webp);
+      padding-block: 34.667vw 24.29vw;
+      padding-inline: 30px;
+    }
+  }
+  &__inner {
+    max-width: 1167px;
+    margin-inline-end: auto;
+    transform: translateY(30px);
+    @include g.mq(md) {
+      transform: translateY(0);
+    }
+  }
+  &__text {
+    margin-block-start: 32px;
+    @include g.mq(md) {
+      margin-block-start: 9vw;
+      padding-inline-start: clamp(29px, 7.7vw, 58px);
+    }
+    & p {
+      @include g.mq(md) {
+        font-size: clamp(1.9rem, 5.05vw, 3.8rem);
+        line-height: 1.84;
+        letter-spacing: .07em;
+        font-weight: bold;
+      }
+    }
+  }
+  &__info {
+    margin-block-start: 60px;
+    @include g.mq(md) {
+      margin-block-start: 0;
+    }
+    & > p {
+      font-weight: bold;
+      line-height: 2.5;
+      letter-spacing: 0.1em;
+      color: g.$c-white;
+      font-size: 1.8rem;
+      @include g.mq(md) {
+        font-size: clamp(1.3rem, 3.46667vw, 2.6rem);
+        line-height: 1.923;
+      }
+    }
+  }
+
+  &__button {
+    margin-block-start: clamp(33px, 4.5vw, 65px);
+    width: 212px;
+    height: 46.05px;
+    @include g.mq(md) {
+      width: 173px;
+      height: 33px;
+    }
+    & span {
+      line-height: 46.05px;
+      font-weight: 400;
+      letter-spacing: .07em;
+      font-size: 2.2rem;
+      @include g.mq(md) {
+        line-height: 33px;
+        font-size: 1.7rem;
+      }
+    }
+    @include g.mq(md) {
+      margin-block-start: 12.18vw;
+      margin-inline: auto;
+    }
+  }
+}

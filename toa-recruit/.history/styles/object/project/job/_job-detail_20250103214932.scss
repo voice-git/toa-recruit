@@ -1,0 +1,50 @@
+@use "../../../global" as g;
+
+.p-job-detail {
+    &__title {
+
+    }
+    &__image {
+
+    }
+    &__inner {
+
+    }
+    &__list {
+        & ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            & li {
+
+            }
+        }
+    }
+    &__content {
+        & ul {
+            & li {
+                & div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: clamp(33px, 4.58vw, 66px);
+                }
+                & img {
+                    width: clamp(281px, 40.4vw, 582px);
+                }
+                & h3 {
+                    font-size: clamp(1.3rem, 1.8vw, 2.6rem);
+                    line-height: 1.923;
+                    letter-spacing: .05em;
+                    font-weight: bold;
+                }
+                & p {
+                    font-size: clamp(1.1rem, 1.25vw, 1.8rem);
+                    line-height: 2.22;
+                    font-weight: bold;
+                    letter-spacing: .1em;
+                }
+            }
+        }
+    }
+}

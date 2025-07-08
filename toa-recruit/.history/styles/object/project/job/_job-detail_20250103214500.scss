@@ -1,0 +1,41 @@
+@use "../../../global" as g;
+
+.p-job-detail {
+    &__title {
+
+    }
+    &__image {
+
+    }
+    &__inner {
+
+    }
+    &__list {
+        & ul {
+            & li {
+
+            }
+        }
+    }
+    &__content {
+        & ul {
+            & li {
+                & div {
+                    display: flex;
+
+                }
+                & img {
+
+                }
+                & h3 {
+
+                }
+                & p {
+                    font-size: clamp(1.1rem, 1.25vw, 1.8rem);
+                    line-height: 2.22;
+                    fwb
+                }
+            }
+        }
+    }
+}

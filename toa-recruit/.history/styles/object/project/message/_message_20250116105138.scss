@@ -1,0 +1,143 @@
+@use "../../../global" as g;
+
+.p-message {
+  position: relative;
+  &::before {
+    content: "";
+    background-image: url(../images/message/message-fv-bg-pc@2x.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+    @include g.mq(md) {
+      content: none;
+    }
+  }
+  &.is-unfixed {
+    &::before {
+      content: "";
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      transform: none;
+      @include g.mq(md) {
+        content: none;
+      }
+    }
+  }
+  &__container {
+    padding-block: 194px 0;
+    padding-inline: 2.77778vw;
+    margin-top: 59px;
+    @include g.mq(md) {
+      background-image: url(../images/message/message-fv-bg-sp@2x.webp);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-block: 0;
+      height: max(138vw, 519px);
+      margin-top: 0;
+    }
+  }
+  &__inner {
+    max-width: 1089px;
+    margin-inline: auto;
+    @include g.mq(md) {
+      padding-inline: 30px;
+    }
+  }
+  &__title {
+    font-family: g.$novecent-cond-medium;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 3;
+    letter-spacing: 0.07em;
+    @include g.mq(md) {
+      font-size: clamp(2rem, 5.33vw, 4rem);
+      line-height: 4.8;
+      padding-inline-start: 30px;
+    }
+  }
+  &__top {
+    font-family: g.$a-otf-futo-go-b101-pro;
+    font-weight: bold;
+    margin-block-start: 19px;
+    font-size: 4rem;
+    letter-spacing: 0.05em;
+    line-height: 2.05;
+    @include g.mq(md) {
+      margin-block: 0 clamp(37px, 9.84vw, 66px);
+      padding-inline: 30px 1px;
+    }
+    & > p {
+      @include g.mq(md) {
+        font-size: clamp(1.1rem, 5.3vw, 2rem);
+        letter-spacing: 0.07em;
+        line-height: 1.75;
+        font-weight: bold;
+      }
+    }
+  }
+  &__content {
+    padding-block: clamp(50px, 6.94vw, 100px) 268px;
+    padding-inline: 2.77778vw;
+    @include g.mq(md) {
+      padding-block: clamp(27px, 7.2vw, 54px) clamp(117px, 31.2vw, 234px);
+      background-image: none;
+      background-color: g.$c-bg;
+      padding-inline: 0;
+    }
+  }
+  &__text {
+    font-size: clamp(1.1rem, 1.389vw, 2rem);
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    line-height: 2.4;
+    @include g.mq(md) {
+      font-size: max(4vw, 1.5rem);
+      font-weight: 500;
+      line-height: 2.133;
+    }
+  }
+  &__info {
+    margin-block-start: 94px;
+    @include g.mq(md) {
+      margin-block-start: 25px;
+    }
+    & > p {
+      font-size: clamp(1.1rem, 1.11vw, 1.6rem);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 2.5;
+      @include g.mq(md) {
+        font-size: max(3.4667vw, 1.3rem);
+        font-weight: 500;
+        line-height: 3;
+        font-weight: 500;
+        // margin-inline-end: clamp(66px, 17.6vw, 132px);
+        margin-inline-start: 1em;
+      }
+    }
+    & img {
+      margin-block-start: clamp(10px, 1.389vw, 20px);
+      transform: translateX(-1.389vw);
+      width: clamp(142.5px, 19.79vw, 285px);
+      @include g.mq(md) {
+        margin-block-start: 6px;
+        // transform: translateX(19px);
+        // margin-inline-start: auto;
+        margin-inline-end: auto;
+        width: max(53.965vw, 202.37px);
+        height: max(12.53vw, 47px);
+      }
+    }
+  }
+}

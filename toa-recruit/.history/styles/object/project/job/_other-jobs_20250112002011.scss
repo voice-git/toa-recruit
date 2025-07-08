@@ -1,0 +1,31 @@
+@use "../../../global" as g;
+
+.p-other-jobs {
+    &__title {
+
+    }
+    &__content {
+        padding-inline: 2.777vw;
+        padding-block: 69px 233px;
+        @include g.mq(md) {
+            padding-inline: 0;
+            padding-block: 54.11px 65px;
+        }
+    }
+    &__inner {
+        max-width: 1217px;
+        margin-inline: auto;
+        @include g.mq(md) {
+            padding-inline: 34px;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(12.5px, 1.736vw, 25px);
+        @include g.mq(md) {
+            grid-template-columns: 1fr;
+            gap: clamp(15px, 3.989vw, 30px);
+        }
+    }
+}

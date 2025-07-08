@@ -1,0 +1,135 @@
+@use "../global" as g;
+
+.l-entry {
+  padding-block-start: 155px;
+  @include g.mq(md) {
+    padding-block: 82px 0;
+  }
+  &--second {
+    padding-block: 120px 0;
+    @include g.mq(md) {
+      padding-block: 0;
+    }
+  }
+  &--faq {
+    padding-block: 65px 0;
+    @include g.mq(md) {
+      padding-block: 0;
+    }
+  }
+  &--data {
+    padding-block: 73px 0;
+    @include g.mq(md) {
+      padding-block: 0;
+      margin-block-start: -3px;
+    }
+  }
+  &--interview {
+    padding-block: 0;
+  }
+  &--guideline {
+    padding-block: 0 clamp(118.5px, 16.875vw, 243px);
+    @include g.mq(md) {
+      padding-block: 0 141px;
+    }
+  }
+  &--job {
+    padding-block: 92px 0;
+    @include g.mq(md) {
+      padding-block: 0;
+      margin-block-start: -3px;
+    }
+  }
+  &--job_detail {
+    padding-block: 89px 0;
+    @include g.mq(md) {
+      padding-block: 0;
+      margin-block-start: -5px;
+    }
+  }
+  &__box {
+    margin-inline: auto;
+    background-image: url(../images/common/entry-bg-pc@2x.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 500px;
+    @include g.mq(md) {
+      background-image: url(../images/common/entry-bg-sp@2x.webp);
+      background-size: cover;
+      // background-size: 100% 100%;
+      // padding-block: clamp(69px, 18.4vw, 138px) clamp(36px, 9.6vw, 72px);
+      height: clamp(376px, 100vw, 752px);
+    }
+    // @include g.mq(sm) {
+    //   background-size: cover;
+    // }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background-color: g.$c-white;
+      box-shadow: 0 0 22.68px g.$c-white;
+      @include g.mq(md) {
+        height: 2px;
+      }
+    }
+    &::before {
+      content: "";
+      bottom: 0;
+    }
+    &::after {
+      content: "";
+      top: 0;
+    }
+  }
+  &__inner {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 96px;
+    transform: translateX(-50%);
+    @include g.mq(md) {
+      top: clamp(71px, 18.88vw, 142px);
+      width: 100%;
+    }
+  }
+  &__title {
+    & img {
+      margin-inline: auto;
+      @include g.mq(md) {
+        width: clamp(177px, 47.199vw, 354px);
+      }
+    }
+  }
+  &__titleBottom {
+    margin-block-start: clamp(17.56px, 2.9vw, 42px);
+    margin-right: 10px;
+    @include g.mq(md) {
+      margin-block-start: clamp(21.16px, 5.64vw, 42.32px);
+      margin-right: 0;
+    }
+    & img {
+      margin-inline: auto;
+      @include g.mq(md) {
+        width: clamp(254px, 67.733vw, 508px);
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    margin-block-start: 129px;
+    @include g.mq(md) {
+      flex-direction: column;
+      gap: clamp(15px, 4vw, 30px);
+      margin-block-start: clamp(89px, 23.67vw, 180px);
+    }
+  }
+}

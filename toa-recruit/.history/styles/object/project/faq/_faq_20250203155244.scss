@@ -1,0 +1,180 @@
+@use "../../../global" as g;
+
+.p-faq {
+  background-color: g.$c-bgAndText;
+  &__container {
+    background-image: url(../images/faq/faq_fv-bg-pc@2x.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-block: 189px 140px;
+    @include g.mq(md) {
+      background-image: url(../images/faq/faq_fv-bg-sp@2x.webp);
+      padding-block: 126px 93px;
+    }
+  }
+  &__title {
+    &--item {
+      margin-block: 40px 35px;
+      &:first-of-type {
+        margin-block-start: 0;
+      }
+    }
+  }
+  &__inner {
+    padding-block: clamp(78.5px, 10.9vw, 157px) clamp(96.5px, 13.4vw, 193px);
+    @include g.mq(md) {
+      padding-block: clamp(37px, 9.8667vw, 74px) clamp(113px, 30.13vw, 226px);
+    }
+  }
+  &__items {
+    padding-inline: 44px 46px;
+    @include g.mq(md) {
+      padding-inline: 30px 30px;
+    }
+  }
+  &__itemWrapper {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.75));
+  }
+  &__item {
+    display: block;
+    background-color: g.$c-white;
+    padding-inline: clamp(21.5px, 2.986vw, 43px) clamp(16.9px, 2.3472vw, 33.8px);
+    max-width: 1085px;
+    margin-inline: auto;
+    border-radius: 5px;
+    @include g.mq(md) {
+      margin-block-end: clamp(20px, 5.33vw, 40px);
+      padding-inline: 0;
+    }
+    &:last-child {
+      margin-block-end: 0;
+    }
+  }
+  &__header {
+    padding-block: clamp(7px, 0.972vw, 14px) clamp(17px, 2.36vw, 34px);
+    color: g.$c-blue;
+    font-size: clamp(1.2rem, 1.6667vw, 2.4rem);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.91667;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    cursor: pointer;
+    @include g.mq(md) {
+      flex-direction: column;
+      align-items: revert;
+      line-height: 1.7778;
+      font-size: clamp(1.8rem, 4.8vw, 36px);
+      padding-block: clamp(18px, 4.8vw, 36px) clamp(21px, 5.585vw, 42px);
+      padding-inline: clamp(25px, 6.667vw, 50px) clamp(40px, 10.6vw, 80px);
+      letter-spacing: 0.02em;
+    }
+    .Accordion[open]:not([data-accordion-before-close]) &::after {
+      transform: translateY(-50%);
+    }
+  }
+  &__q {
+    font-family: g.$din-pro;
+    font-size: clamp(1.8rem, 2.5vw, 3.6rem);
+    font-weight: bold;
+    line-height: 1.8333;
+    margin-inline-end: clamp(12.5px, 1.7vw, 25px);
+    position: relative;
+    top: 0.25em;
+    @include g.mq(md) {
+      display: none;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: clamp(11.45px, 1.59vw, 22.9px);
+    height: 2px;
+    background-color: g.$c-blue;
+    right: -2px;
+    transform: translateY(-50%);
+    @include g.mq(md) {
+      width: clamp(13px, 3.4667vw, 26px);
+      transform: none;
+      height: 2;
+      right: clamp(15px, 4vw, 30px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      right: 0;
+      width: clamp(11.45px, 1.59vw, 22.9px);
+      height: 2px;
+      background-color: g.$c-blue;
+      transition: transform 0.5s;
+      transform: translateY(-50%) rotate(-90deg);
+      @include g.mq(md) {
+        width: clamp(13px, 3.4667vw, 26px);
+        height: 2;
+        transform: rotate(-90deg);
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  details.is-opened {
+    .p-faq__icon {
+      &::after {
+        content: "";
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__content {
+    overflow: hidden;
+  }
+  &__contentInner {
+    padding-block-end: clamp(13.5px, 1.875vw, 27px);
+    display: flex;
+    align-items: flex-start;
+    padding-inline-end: clamp(17.15px, 2.38vw, 34.3px);
+    margin-top: calc(clamp(5px, 0.694vw, 10px) * -1);
+    @include g.mq(md) {
+      flex-direction: column;
+      padding-inline-end: 0;
+      padding-block-end: clamp(24px, 6.38vw, 48px);
+    }
+  }
+  &__a {
+    font-family: g.$din-pro;
+    font-size: clamp(1.8rem, 2.5vw, 3.6rem);
+    font-weight: bold;
+    line-height: 1.833;
+    margin-inline-end: clamp(12.5px, 1.736vw, 25px);
+    color: g.$c-blue;
+    position: relative;
+    top: -0.3em;
+    margin-inline-start: 2px;
+    @include g.mq(md) {
+      font-size: clamp(3.5rem, 9.33vw, 7rem);
+      line-height: 1.6;
+      margin-inline: auto;
+      top: 0;
+    }
+  }
+  &__answer {
+    font-weight: bold;
+    font-size: clamp(1.3rem, 1.25vw, 1.8rem);
+    line-height: 2;
+    letter-spacing: 0.1em;
+    color: g.$c-black;
+    @include g.mq(md) {
+      font-weight: 500;
+      line-height: 2.133;
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      padding-inline: clamp(26px, 6.93vw, 52px) clamp(29px, 7.73vw, 58px);
+      letter-spacing: 0.08em;
+    }
+  }
+}

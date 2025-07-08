@@ -1,0 +1,15 @@
+@use "../global" as g;
+
+.l-global-container {
+  &.is-hidden {
+    display: none;
+  }
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}

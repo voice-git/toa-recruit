@@ -1,0 +1,58 @@
+@use "../../../global" as g;
+
+.p-fields {
+    &__top {
+        padding-block: 31px 173px;
+        // background-image: url();
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__title {
+
+    }
+    &__slogan {
+        margin-block-start: 180px;
+        margin-inline: auto;
+        & > h3 {
+
+        }
+    }
+    &__topButton {
+        margin-block-start: 52px;
+        border-radius: 32px;
+        & > a {
+            border-radius: 32px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            & > span {
+
+            }
+        }
+    }
+    &__content {
+
+    }
+    &__inner {
+
+    }
+    &__list {
+
+    }
+    &__item {
+
+    }
+    &__itemTitle {
+
+    }
+    &__itemText {
+
+    }
+    &__itemButton {
+
+    }
+    &__button {
+
+    }
+}

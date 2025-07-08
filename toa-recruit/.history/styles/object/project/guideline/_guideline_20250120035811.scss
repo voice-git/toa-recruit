@@ -1,0 +1,518 @@
+@use "../../../global" as g;
+
+.p-guideline {
+  &__container {
+    background-image: url(../images/guideline/guideline-fv-bg-pc@2x.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-block: 197px 134px;
+    @include g.mq(md) {
+      background-image: url(../images/guideline/guideline-fv-bg-sp@2x.webp);
+      padding-block: 121px 91px;
+    }
+  }
+  &__itemTitle {
+    margin-block-end: 39px;
+    @include g.mq(md) {
+      margin-block-end: clamp(54px, 14.39vw, 108px);
+    }
+  }
+  &__outer {
+    padding-inline: 2.7778vw;
+    position: relative;
+    @include g.mq(md) {
+      padding-inline: 0;
+    }
+  }
+  &__inner {
+    max-width: 833px;
+    margin-inline: auto;
+    padding-block: 117px 178px;
+    @include g.mq(md) {
+      padding-block: clamp(55.2px, 14.7vw, 110.4px)
+        clamp(98.9px, 26.37vw, 197.8px);
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  &__flowWrapper {
+    max-width: 875px;
+    height: auto;
+    position: relative;
+  }
+  &__flow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    position: relative;
+    width: clamp(437.5px, 89.28vw, 875px);
+    height: clamp(150px, 30.6vw, 300px);
+    @include g.mq(lg) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include g.mq(md) {
+      width: 96vw;
+      height: clamp(149px, 39.6vw, 298px);
+    }
+    & img {
+      position: absolute;
+      top: 0;
+      left: -8px;
+      object-position: left;
+      width: 100%;
+      height: 100%;
+      @include g.mq(lg) {
+        left: -4px;
+      }
+      @include g.mq(md) {
+        left: 0;
+      }
+    }
+    & > ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(47.2px, 10.66vw, 94.4px);
+      padding-inline: clamp(14.3px, 3.23vw, 28.61px) clamp(12.5px, 2.8vw, 25px);
+      height: 100%;
+      @include g.mq(md) {
+        gap: clamp(38.8px, 10.3467vw, 77.6px);
+      }
+      & > li {
+        width: clamp(98px, 22.1vw, 196px);
+        @include g.mq(md) {
+          width: clamp(80.5px, 21.467vw, 161px);
+        }
+        & > p {
+          font-size: clamp(1.7rem, 3.84vw, 3.4rem);
+          font-weight: bold;
+          letter-spacing: 0.3em;
+          line-height: 1.47;
+          text-align: center;
+          @include g.mq(md) {
+            font-size: clamp(1.8rem, 4.8vw, 3.6rem);
+            line-height: 1.444;
+            letter-spacing: 0.25em;
+          }
+        }
+      }
+    }
+  }
+  &__flowNote {
+    font-size: 1.7rem;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    text-align: center;
+    font-weight: 500;
+    margin-top: -12px;
+    @include g.mq(md) {
+      font-size: clamp(1.3rem, 3.4667vw, 2.6rem);
+      line-height: 2.6;
+      margin-block-start: calc(clamp(20px, 5.3vw, 40px) * -1);
+    }
+  }
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    margin-block-start: 175px;
+    @include g.mq(md) {
+      flex-direction: column;
+      margin-block-start: clamp(65px, 17.287vw, 130px);
+    }
+  }
+  &__tab {
+    border-radius: 5px;
+    width: 50%;
+    height: 67px;
+    box-shadow: 0 0 22px 0 rgba(255, 255, 255, 1),
+      inset 0 0 22px 0 rgba(255, 255, 255, 1);
+    border: 4px solid g.$c-white;
+    font-size: 2.4rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 67px;
+    cursor: pointer;
+    @include g.mq(md) {
+      width: 100%;
+      height: clamp(56px, 14.933vw, 112px);
+      border: clamp(2px, 0.533vw, 4px) solid g.$c-white;
+      font-size: clamp(2rem, 5.33vw, 4rem);
+      line-height: clamp(56px, 14.933vw, 112px);
+      box-shadow: 0 0 11px 0 rgba(255, 255, 255, 1),
+        inset 0 0 11px 0 rgba(255, 255, 255, 1);
+      border-radius: 0;
+    }
+    &:first-of-type {
+      @include g.mq(md) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: clamp(2px, 0.533vw, 4px);
+          box-shadow: 0 0 22px 0 rgba(255, 255, 255, 1),
+            inset 0 0 22px 0 rgba(255, 255, 255, 1);
+          background-color: g.$c-white;
+        }
+      }
+    }
+    &:first-of-type,
+    &:last-of-type {
+      @include g.mq(md) {
+        border: none;
+        box-shadow: none;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: clamp(2px, 0.533vw, 4px);
+          box-shadow: 0 0 22px 0 rgba(255, 255, 255, 1),
+            inset 0 0 22px 0 rgba(255, 255, 255, 1);
+          background-color: g.$c-white;
+        }
+      }
+    }
+    &.is-active {
+      background-color: g.$c-white;
+      color: g.$c-blue;
+    }
+  }
+
+  &__items {
+    display: none;
+    &.is-show {
+      display: block;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-block: 54px 50px;
+    display: flex;
+    gap: 80px;
+    @include g.mq(md) {
+      padding-block: clamp(33px, 8.799vw, 66px);
+      flex-direction: column;
+      gap: 10px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 833px;
+      width: 100%;
+      height: 4px;
+      background-color: g.$c-white;
+      box-shadow: 0 0 22.68px 0 rgba(255, 255, 255, 1);
+      @include g.mq(md) {
+        width: 100%;
+        height: clamp(2px, 0.533vw, 4px);
+      }
+    }
+    &:nth-of-type(1) {
+      @include g.mq(md) {
+        gap: 30px;
+      }
+    }
+    &:nth-of-type(2) {
+      @include g.mq(md) {
+        padding-bottom: 41px;
+      }
+    }
+    &:nth-of-type(3) {
+      padding-bottom: 55px;
+      @include g.mq(md) {
+        padding-bottom: 41px;
+      }
+    }
+    &:nth-of-type(4) {
+      padding-bottom: 40px;
+      @include g.mq(md) {
+        padding-bottom: 28px;
+      }
+      & dd {
+        & ul {
+          & li {
+            padding-bottom: 14px;
+            @include g.mq(md) {
+              padding-bottom: 18px;
+            }
+            &:nth-child(2) {
+              padding-bottom: 11px;
+              @include g.mq(md) {
+                padding-bottom: 27px;
+              }
+            }
+            &.is-16 {
+              @include g.mq(md) {
+                font-size: clamp(1.6rem, 4.255vw, 3.2rem);
+                letter-spacing: .1em;
+                line-height: 1.75;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:nth-of-type(5) {
+      padding-bottom: 62px;
+      padding-top: 68px;
+      @include g.mq(md) {
+        padding-bottom: 38px;
+        padding-top: 33px;
+        font-weight: bold;
+        & dt {
+          padding-inline: 30px;
+          margin-inline: 0;
+          text-align: left;
+          font-size: 2.1rem;
+        }
+        & ul {
+          letter-spacing: 0.09em;
+          font-weight: bold;
+          line-height: 1.79;
+          font-size: 1.6rem;
+        }
+      }
+    }
+    &:nth-of-type(6) {
+      padding-bottom: 61px;
+      @include g.mq(md) {
+        padding-bottom: 38px;
+        font-weight: bold;
+        & dt {
+          padding-inline: 30px;
+          margin-inline: 0;
+          text-align: left;
+          font-size: 2.1rem;
+        }
+        & dd {
+          font-size: 1.7rem;
+          line-height: 1.7;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    &:nth-of-type(7) {
+      padding-bottom: 60px;
+      font-weight: bold;
+      @include g.mq(md) {
+        padding-bottom: 40px;
+        font-weight: bold;
+        & dt {
+          padding-inline: 30px;
+          margin-inline: 0;
+          text-align: left;
+          font-size: 2.1rem;
+        }
+        & dd {
+          font-size: 1.7rem;
+          line-height: 1.7;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    &:nth-of-type(8) {
+      padding-bottom: 61px;
+      @include g.mq(md) {
+        font-weight: bold;
+        padding-bottom: 40px;
+        & dt {
+          padding-inline: 30px;
+          margin-inline: 0;
+          text-align: left;
+          font-size: 2.1rem;
+        }
+        & dd {
+          font-size: 1.6rem;
+          line-height: 1.75;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    &:nth-of-type(9) {
+      padding-bottom: 64px;
+      @include g.mq(md) {
+        padding-bottom: 42px;
+        & dt {
+          padding-inline: 30px;
+          margin-inline: 0;
+          text-align: left;
+          font-size: 2.1rem;
+        }
+        & dd {
+          font-size: 1.6rem;
+          line-height: 1.75;
+          letter-spacing: 0.1em;
+          padding-inline: 29px;
+        }
+      }
+    }
+    &:nth-of-type(10) {
+      padding-bottom: 60px;
+      @include g.mq(md) {
+        padding-bottom: 40px;
+        & dt {
+          padding-inline: 30px;
+          margin-inline: 0;
+          text-align: left;
+          font-size: 2.1rem;
+        }
+        & dd {
+          font-size: 1.7rem;
+          line-height: 1.7;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    &:nth-of-type(11) {
+      padding-bottom: 65px;
+      @include g.mq(md) {
+        padding-bottom: 45px;
+        & dt {
+          padding-inline: 30px;
+          margin-inline: 0;
+          text-align: left;
+          font-size: 2.1rem;
+        }
+        & dd {
+          font-size: 1.6rem;
+          line-height: 1.75;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    &:nth-of-type(12) {
+      padding-bottom: 60px;
+      @include g.mq(md) {
+        padding-bottom: 35px;
+        & dt {
+          padding-inline: 30px;
+          margin-inline: 0;
+          text-align: left;
+          font-size: 2.1rem;
+        }
+        & dd {
+          font-size: 1.6rem;
+          line-height: 1.75;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    &:nth-of-type(13) {
+      padding-bottom: 67px;
+      padding-top: 63px;
+      @include g.mq(md) {
+        padding-top: 34px;
+        padding-bottom: 38px;
+        & dt {
+          padding-inline: 30px;
+          margin-inline: 0;
+          text-align: left;
+          font-size: 2.1rem;
+        }
+        & dd {
+          font-size: 1.6rem;
+          line-height: 1.75;
+          letter-spacing: 0.06em;
+        }
+      }
+    }
+    &:nth-of-type(14) {
+      padding-bottom: 55px;
+      padding-top: 60px;
+      @include g.mq(md) {
+        padding-top: 36px;
+        padding-bottom: 36px;
+        gap: 7px;
+        & dt {
+          padding-inline: 30px;
+          margin-inline: 0;
+          text-align: left;
+          font-size: 2.1rem;
+        }
+        & dd {
+          font-size: 1.6rem;
+          line-height: 1.75;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    & dt {
+      font-size: 2.6rem;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      line-height: 1.3;
+      max-width: 170px;
+      width: 100%;
+      white-space: nowrap;
+      @include g.mq(md) {
+        font-size: clamp(2.2rem, 5.8667vw, 4.4rem);
+        width: 100%;
+        line-height: 1.6;
+        text-align: center;
+        margin-inline: auto;
+      }
+    }
+    & dd {
+      max-width: 580px;
+      font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 1.7;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      @include g.mq(md) {
+        max-width: 100%;
+        font-size: clamp(1.4rem, 3.733vw, 2.8rem);
+        padding-inline: 30px;
+        line-height: 1.857;
+        &.is-center {
+          text-align: center;
+        }
+      }
+      & span.is-note {
+        font-weight: 500;
+      }
+      & > ul {
+        & > li {
+          margin-block-end: 25px;
+          @include g.mq(md) {
+            margin-block-end: 20px;
+          }
+          &:last-child {
+            margin-block-end: 0;
+          }
+          &.is-tech {
+            & > p {
+              @include g.mq(md) {
+                margin-block-end: 17px;
+                letter-spacing: 0.08em;
+                // white-space: nowrap;
+              }
+              
+            }
+          }
+          & > span {
+            display: block;
+            &:not(&:first-child) {
+              font-weight: 500;
+            }
+          }
+          & > p {
+            &:not(&:first-child) {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}

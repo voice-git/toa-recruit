@@ -1,0 +1,61 @@
+@use "../../../global" as g;
+
+.p-job-detail {
+    &__title {
+
+    }
+    &__image {
+
+    }
+    &__inner {
+
+    }
+    &__list {
+        & ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: clamp(10.5px, 1.458vw, 21px);
+            row-gap: clamp(12.5px, 1.7361vw, 25px);
+            & li {
+                border-radius: 10px;
+                border: solid clamp(2px, 0.277 4px) g.$c-white;
+                box-shadow: 0 0 22px g.$c-white;
+                font-size: clamp(1.2rem, 1.667vw, 2.4rem);
+                // text-align: center;
+                letter-spacing: .05em;
+                height: clamp(59.5px, 8.26vw, 119px);
+                line-height: clamp(59.5px, 8.26vw, 119px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    &__content {
+        & ul {
+            & li {
+                & div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: clamp(33px, 4.58vw, 66px);
+                }
+                & img {
+                    width: clamp(281px, 40.4vw, 582px);
+                }
+                & h3 {
+                    font-size: clamp(1.3rem, 1.8vw, 2.6rem);
+                    line-height: 1.923;
+                    letter-spacing: .05em;
+                    font-weight: bold;
+                }
+                & p {
+                    font-size: clamp(1.1rem, 1.25vw, 1.8rem);
+                    line-height: 2.22;
+                    font-weight: bold;
+                    letter-spacing: .1em;
+                }
+            }
+        }
+    }
+}

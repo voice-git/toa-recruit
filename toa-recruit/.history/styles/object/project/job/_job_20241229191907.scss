@@ -1,0 +1,46 @@
+@use "../../../global" as g;
+
+.p-job {
+    &__container {
+        background-image: url(../../../../images/);
+    }
+    &__title {
+
+    }
+    &__content {
+
+    }
+    &__inner {
+
+    }
+    &__list {
+
+    }
+    &__item {
+
+    }
+    &__itemImage {
+        & img {
+
+        }
+    }
+    &__itemTexts {
+        & span {
+            & svg {
+
+            }
+        }
+    }
+    &__itemTitle {
+        & h3 {
+            & span {
+
+            }
+        }
+    }
+    &__text {
+        & p {
+
+        }
+    }
+}

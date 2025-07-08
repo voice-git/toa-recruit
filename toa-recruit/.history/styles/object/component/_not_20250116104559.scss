@@ -1,0 +1,21 @@
+@use "../../global" as g;
+
+.c-not {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 39.48px;
+    object-position: left;
+    object-fit: cover;
+    transform: translateY(-50%) translateZ(0);
+    @include g.mq(xl) {
+        transform: translateY(-50%) scaleX(.9) translateZ(0);
+    }
+    @include g.mq(lg) {
+        transform: translateY(-50%) scaleX(.75) translateZ(0);
+    }
+    @include g.mq(md) {
+        transform: translateY(-50%) translateZ(0);
+        top: 45%;
+    }
+}

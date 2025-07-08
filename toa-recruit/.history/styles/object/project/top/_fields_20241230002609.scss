@@ -1,0 +1,170 @@
+@use "../../../global" as g;
+
+.p-fields {
+  &__top {
+    padding-block: 31px 173px;
+    background-image: url(../images/top/fields-bg@2x.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include g.mq(md) {
+      padding-block: 19px 142.6px;
+      background-image: url(../images/top/fields-bg-sp@2x.jpg);
+    }
+  }
+  &__title {
+  }
+  &__slogan {
+    margin-block-start: 180px;
+    @include g.mq(md) {
+      margin-block-start: 93px;
+    }
+    & img {
+      margin-inline: auto;
+    }
+  }
+  &__topButton {
+    margin-block-start: 52px;
+    border-radius: 32px;
+    width: 348.42px;
+    height: 45.77px;
+    margin-inline: auto;
+    @include g.mq(md) {
+      width: 232px;
+      height: 35.34px;
+      margin-block-start: 32px;
+    }
+    & > a {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      text-align: center;
+      border-radius: 32px;
+      line-height: 45.77px;
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: solid 1px g.$c-white;
+      background-color: rgba(255, 255, 255, 0.3);
+      @include g.mq(md) {
+        font-size: 1.4rem;
+        line-height: 32px;
+      }
+      & > span {
+      }
+    }
+  }
+  &__content {
+    @include g.mq(md) {
+      padding-block: 59px 107px;
+    }
+  }
+  &__inner {
+    max-width: 1205px;
+    margin-inline: auto;
+    @include g.mq(md) {
+      padding-inline: 19px;
+    }
+  }
+  &__list {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 115px;
+    @include g.mq(md) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 22px;
+      row-gap: 69.8px;
+    }
+  }
+  &__item {
+    text-align: center;
+    position: relative;
+  }
+  &__itemTitle {
+    & > h3 {
+      font-family: g.$a-otf-futo-go-b101-pro;
+      font-size: 8.6rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      line-height: 1.1;
+      @include g.mq(md) {
+        font-size: 4rem;
+        line-height: 1.14;
+      }
+    }
+  }
+  &__field {
+    position: absolute;
+    left: 50%;
+    top: 53px;
+    transform: translateX(-50%);
+    @include g.mq(md) {
+      top: 27.6px;
+      left: 0;
+      transform: translateX(0);
+    }
+    & img {
+      @include g.mq(md) {
+        filter: drop-shadow(0 0 8.1px rgba(255, 255, 255, 0.9));
+      }
+    }
+  }
+  &__itemText {
+    margin-block-start: 58px;
+    @include g.mq(md) {
+      margin-block-start: 26.6px;
+    }
+    & > p {
+      font-size: 1.6rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 1.8125;
+      @include g.mq(md) {
+        font-size: 12px;
+        letter-spacing: 0.02em;
+        line-height: 1.8333;
+      }
+    }
+  }
+  &__itemButton {
+    position: relative;
+    margin-inline: auto;
+    width: 151.9px;
+    height: 33px;
+    margin-block-start: 23px;
+    @include g.mq(md) {
+      width: 84px;
+      height: 25px;
+      margin-block-start: 12px;
+    }
+    & > a {
+      font-family: g.$novecent-cond-medium;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-transform: uppercase;
+      border-radius: 32px;
+      border: solid 1px g.$c-white;
+      font-size: 1.6rem;
+      line-height: 33px;
+      @include g.mq(md) {
+        border-radius: 31.8px;
+        font-size: 1.4rem;
+        line-height: 25px;
+      }
+      & > svg {
+        transform: translateY(-50%);
+        top: 50%;
+        right: 8px;
+        position: absolute;
+      }
+    }
+  }
+  &__button {
+    margin-inline: auto;
+    @include g.mq(md) {
+        margin-block-start: 60px;
+    }
+  }
+}

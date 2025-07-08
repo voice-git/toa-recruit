@@ -1,0 +1,21 @@
+@use "../../../global" as g;
+
+.p-other-jobs {
+    padding-block: 14;
+    &__title {
+
+    }
+    &__content {
+        padding-inline: 2.777vw;
+        padding-block: 69px 233px;
+    }
+    &__inner {
+        max-width: 1217px;
+        margin-inline: auto;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(12.5px, 1.736vw, 25px);
+    }
+}

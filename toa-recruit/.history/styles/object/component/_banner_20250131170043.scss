@@ -1,0 +1,14 @@
+@use "../../global" as g;
+
+.c-banner {
+    
+    &:hover {
+        // opacity: 1.1;
+        filter: brightness(110%);
+        & p,
+        & .p-news__date,
+        & .p-news__itemTitle {
+            opacity: .5;
+        }   
+    }
+}

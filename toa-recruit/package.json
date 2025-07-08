@@ -1,0 +1,22 @@
+{
+  "name": "toa_recruit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:scss": "sass styles/style.scss:styles/style.css",
+    "watch:scss": "sass styles/style.scss:styles/style.css --watch",
+    "build:css": "npm run build:scss && postcss styles/style.css --use autoprefixer --replace",
+    "watch:css": "npm run watch:scss & npx postcss styles/style.css --use autoprefixer --watch --replace"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.81.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
+}

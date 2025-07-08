@@ -1,0 +1,83 @@
+@use "../../../global" as g;
+
+.p-news-detail {
+  padding-block: 161px 86px;
+  @include g.mq(md) {
+    padding-block: clamp(77px, 20.4787vw, 154px) clamp(69.08px, 18.42vw, 138.16px);
+  }
+  &__inner {
+    padding-inline: 2.7778vw;
+    @include g.mq(md) {
+      padding-inline: 30px;
+    }
+  }
+  &__content {
+    max-width: 830px;
+    margin-inline: auto;
+    & time {
+      font-family: g.$novecent-cond-medium;
+      font-size: 2rem;
+      line-height: 4.8;
+      letter-spacing: 0.02em;
+      @include g.mq(md) {
+        font-size: clamp(1.3rem, 3.4667vw, 2.6rem);
+        line-height: 1.5;
+        letter-spacing: .12em;
+      }
+    }
+    & h3 {
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-block-start: -20px;
+      width: 100%;
+      position: relative;
+      padding-block-end: 26px;
+      @include g.mq(md) {
+        letter-spacing: .04em;
+        font-size: clamp(1.8rem, 4.8vw, 3.6rem);
+        line-height: 1.444;
+        margin-block-start: clamp(6px, 1.6vw, 12px);
+        padding-block-end: clamp(16px, 4.2667vw, 32px);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        background-color: g.$c-white;
+        box-shadow: 0px 0px 22.68px 0px rgba(255, 255, 255, 1);
+        @include g.mq(md) {
+          height: clamp(2px, 0.533vw, 4px);
+        }
+      }
+    }
+    & picture {
+        width: 100%;
+        margin-block-start: 51px;
+        @include g.mq(md) {
+          margin-block-start: clamp(35px, 9.3vw, 70px);
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    & p {
+        font-weight: 500;
+        letter-spacing: .08em;
+        line-height: 2.25;
+        margin-block-start: 45px;
+        @include g.mq(md) {
+          font-size: clamp(1.5rem, 4vw, 3rem);
+          line-height: 2.133;
+          letter-spacing: .05em;
+          margin-block-start: clamp(33px, 8.799vw, 66px);
+        }
+    }
+  }
+}

@@ -1,0 +1,339 @@
+@use "../../../global" as g;
+
+.p-staff {
+  background-color: g.$c-bg;
+
+  &__title {
+    margin-block-end: 58px;
+    @include g.mq(sm) {
+      margin-block-end: clamp(46px, 12.2667vw, 92px);
+    }
+  }
+  &__inner {
+    padding-inline: 2.7778vw;
+  }
+  &__slogan {
+    text-align: center;
+    margin-block-end: 109px;
+    @include g.mq(sm) {
+      margin-block-end: clamp(62.8px, 16.74667vw, 125.6px);
+    }
+    & > p {
+      font-size: 2.6rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 1.538;
+      // color: g.$c-white;
+      margin-block-end: 30px;
+      @include g.mq(sm) {
+        font-size: clamp(1.4rem, 3.7333vw, 2.8rem);
+        letter-spacing: 0.03em;
+        line-height: 2.857;
+        margin-block-end: clamp(14px, 3.7333vw, 28px);
+        &:last-child {
+          font-size: 4.5rem;
+          letter-spacing: -0.05em;
+          font-weight: bold;
+          line-height: 1.22;
+          margin-block-end: 0;
+        }
+      }
+    }
+    & img {
+      margin-inline: auto;
+      @include g.mq(md) {
+        width: clamp(254px, 67.733vw, 508px);
+      }
+    }
+  }
+
+  &__employees {
+    display: flex;
+    // position: relative;
+    // width: 100%;
+    // height: 100%;
+    @include g.mq(md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__employeesImages {
+    width: 50%;
+    // position: relative;
+
+    
+    // height: 720px; 元からコメントアウト
+    // height: 100vh;
+    @include g.mq(md) {
+      display: contents;
+    }
+  }
+  &__employeesImage {
+    
+    height: clamp(360px, 50vw, 720px);
+    // height: 100vh;
+
+
+
+    // height: 100%;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    // opacity: 0;
+    // z-index: 0;
+    position: relative;
+    @include g.mq(md) {
+      position: relative;
+      top: auto;
+      left: auto;
+      opacity: 1;
+      height: 100vw;
+    }
+    // &.is-active {
+    //   opacity: 1;
+    //   z-index: 1;
+    // }
+    &
+  }
+  &__pin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &--first {
+      background-image: url(../images/top/employee-bg-01@2x.jpg);
+      @include g.mq(md) {
+        order: 1;
+      }
+    }
+    &--second {
+      background-image: url(../images/top/employee-bg-02@2x.jpg);
+      @include g.mq(md) {
+        order: 3;
+      }
+    }
+    &--third {
+      background-image: url(../images/top/employee-bg-03@2x.jpg);
+      @include g.mq(md) {
+        order: 5;
+      }
+    }
+    &--fourth {
+      background-image: url(../images/top/employee-bg-04@2x.jpg);
+      @include g.mq(md) {
+        order: 7;
+      }
+    }
+    &--fifth {
+      background-image: url(../images/top/employee-bg-05@2x.jpg);
+      @include g.mq(md) {
+        order: 9;
+      }
+    }
+    &--sixth {
+      background-image: url(../images/top/employee-bg-06@2x.jpg);
+      @include g.mq(md) {
+        order: 11;
+      }
+    }
+  }
+  &__employeesSlogan {
+    &--old {
+      position: absolute;
+      left: 50%;
+      top: 51%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      max-width: clamp(302.5px, 42vw, 605px);
+      width: 100%;
+      // width: clamp(212px, 28.7vw, 414px);
+      text-align: center;
+      @include g.mq(md) {
+        max-width: 100%;
+      }
+      & > p {
+        text-align: center;
+        font-size: clamp(2.5rem, 3.4722vw, 5rem);
+        font-weight: bold;
+        letter-spacing: 0.03em;
+        line-height: 1.6;
+        // text-align: center;
+        color: g.$c-white;
+        // text-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.45);
+        text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.45);
+
+        display: inline-block;
+        // width: clamp(212px, 28.7vw, 414px);
+        @include g.mq(md) {
+          font-size: 5rem;
+        }
+        @include g.mq(sm) {
+          font-size: clamp(2.7rem, 7.199vw, 5.4rem);
+          line-height: 2.96;
+          text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.45);
+        }
+      }
+      & img {
+        height: clamp(6.1px, 0.84722vw, 12.2px);
+        @include g.mq(md) {
+          height: 6px;
+        }
+      }
+    }
+  }
+
+  &__employeesContents {
+    width: 50%;
+    background-color: g.$c-white;
+    // width: 50vw;
+    // position: absolute;
+    // right: 0;
+    // top: 0;
+    @include g.mq(md) {
+      // width: 100%;
+      display: contents;
+    }
+  }
+  &__employeesContent {
+    background-color: g.$c-white;
+    height: clamp(360px, 50vw, 720px);
+    // height: 100vh;
+
+
+
+
+    // padding-block: 151px 85px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding-block-start: clamp(25px, 3.472vw, 50px);
+    @include g.mq(md) {
+      height: auto;
+      padding-block: clamp(31px, 8.2667vw, 62px) clamp(45px, 12vw, 90px);
+      width: 100%;
+    }
+    &--first {
+      @include g.mq(md) {
+        order: 2;
+      }
+    }
+    &--second {
+      @include g.mq(md) {
+        order: 4;
+      }
+    }
+    &--third {
+      @include g.mq(md) {
+        order: 6;
+      }
+    }
+    &--fourth {
+      @include g.mq(md) {
+        order: 8;
+      }
+    }
+    &--fifth {
+      @include g.mq(md) {
+        order: 10;
+      }
+    }
+    &--sixth {
+      @include g.mq(md) {
+        order: 12;
+      }
+    }
+  }
+  &__employeesInner {
+  }
+  &__employeesHeadline {
+    display: flex;
+    gap: 5.4px;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: clamp(36.5px, 5.0694vw, 73px);
+    @include g.mq(md) {
+      gap: clamp(4px, 1.0667vw, 8px);
+      margin-block-end: clamp(25px, 6.667vw, 50px);
+    }
+    & > img {
+      @include g.mq(md) {
+        width: clamp(143px, 38.133vw, 286px);
+      }
+    }
+    & > p {
+      @include g.mq(sm) {
+        font-size: clamp(1.2rem, 3.2vw, 2.4rem);
+        font-weight: bold;
+        letter-spacing: -0.05em;
+        line-height: 2.64;
+        color: g.$c-blue;
+      }
+    }
+    & > span {
+      font-family: g.$din-pro;
+      font-size: 1.9rem;
+      font-weight: bold;
+      letter-spacing: -0.05em;
+      line-height: 2.1;
+      color: g.$c-blue;
+      @include g.mq(md) {
+        font-size: clamp(1.4rem, 5.066vw, 2.8rem);
+        line-height: 2.264;
+      }
+    }
+  }
+  &__employeesSlogan {
+    &--new {
+      & > p {
+        font-family: g.$a-otf-futo-go-b101-pro;
+        font-size: clamp(3.6rem, 5vw, 7.2rem);
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        line-height: 1.333;
+        text-align: center;
+        color: g.$c-blue;
+        @include g.mq(md) {
+          font-size: 7.2rem;
+        }
+        @include g.mq(sm) {
+          font-size: clamp(3.6rem, 9.6vw, 7.2rem);
+          line-height: 1.3888;
+        }
+      }
+    }
+  }
+  &__employeesInfo {
+    margin-block-start: clamp(16px, 2.222vw, 32px);
+    @include g.mq(sm) {
+      margin-block-start: clamp(14px, 3.733vw, 28px);
+    }
+    & > p {
+      font-size: clamp(1.1rem, 1.5277vw, 2.2rem);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 1.818;
+      color: g.$c-blue;
+      text-align: center;
+      @include g.mq(sm) {
+        font-size: clamp(1.3rem, 3.466vw, 2.6rem);
+        line-height: 3.0769;
+      }
+    }
+  }
+  &__button {
+    margin-inline: auto;
+    margin-block-start: clamp(26.75px, 3.7vw, 53.5px);
+    @include g.mq(sm) {
+      margin-block-start: clamp(22px, 5.8667vw, 44px);
+    }
+  }
+}

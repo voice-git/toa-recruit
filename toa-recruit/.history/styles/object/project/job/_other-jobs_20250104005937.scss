@@ -1,0 +1,19 @@
+@use "../../../global" as g;
+
+.p-other-jobs {
+    &__title {
+
+    }
+    &__content {
+
+    }
+    &__inner {
+        max-width: 1217px;
+        margin-inline: auto;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}

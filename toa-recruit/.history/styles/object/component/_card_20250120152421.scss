@@ -1,0 +1,227 @@
+@use "../../global" as g;
+
+.c-card {
+  background-color: g.$c-white;
+  position: relative;
+  border-radius: 5px;
+  & a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
+    padding: clamp(25px, 3.472vw, 50px) 0 clamp(20.5px, 2.847vw, 41px) 0;
+    @include g.mq(md) {
+      padding: clamp(16px, 4.255vw, 32px) 0 clamp(29px, 7.7vw, 58px) 0;
+    }
+    &:hover {
+      background-color: rgba(63, 110, 180, 0.3);
+      opacity: 1;
+
+      .c-card__circle {
+        background-color: g.$c-white;
+        &::after {
+          content: "";
+          background-color: g.$c-blue;
+        }
+      }
+    }
+  }
+  &--modal {
+    & a {
+      padding: clamp(17px, 2.361vw, 34px) 0 clamp(15px, 2.08vw, 30px) 0;
+      @include g.mq(md) {
+        padding: clamp(17px, 2.361vw, 34px) 0 clamp(28px, 7.4468vw, 56px) 0;
+      }
+    }
+  }
+  &__inner {
+    width: 90%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: clamp(62.5px, 8.68vw, 125px) 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(4.5px, 0.625vw, 9px);
+    @include g.mq(md) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-inline: clamp(24px, 6.38vw, 48px);
+      padding-inline: clamp(24px, 6.38vw, 48px) clamp(22px, 5.851vw, 44px);
+      flex-direction: column;
+      gap: clamp(24px, 6.38vw, 48px);
+    }
+  }
+  &__topWrapper {
+    @include g.mq(md) {
+      display: grid;
+      grid-template-columns: minmax(10.6vw, 17vw) 1fr;
+      width: 100%;
+      gap: 3.3vw;
+      align-items: flex-end;
+    }
+  }
+  &__image {
+    width: 100%;
+    max-width: clamp(120px, 31.9vw, 240px);
+    @include g.mq(md) {
+      width: 100%;
+    }
+    & img {
+      margin-inline: auto;
+      object-fit: contain;
+      aspect-ratio: 1 / 1;
+      max-height: 100%;
+    }
+  }
+  &__texts {
+    color: g.$c-blue;
+    max-width: 388px;
+    width: 100%;
+    @include g.mq(md) {
+      max-width: 100%;
+    }
+    &--modal {
+      max-width: 277px;
+      @include g.mq(md) {
+        max-width: clamp(277px, 73.67vw, 554px);
+      }
+    }
+  }
+  &__circle {
+    background-color: g.$c-blue;
+    width: clamp(16.5px, 2.29vw, 33px);
+    height: clamp(16.5px, 2.29vw, 33px);
+    border-radius: 50%;
+    position: absolute;
+    right: clamp(26px, 3.61vw, 52px);
+    top: clamp(25px, 3.472vw, 50px);
+    display: block;
+    transition: background-color 0.3s ease;
+    @include g.mq(md) {
+      width: clamp(21px, 5.585vw, 42px);
+      height: clamp(21px, 5.585vw, 42px);
+      top: auto;
+      right: clamp(7px, 1.86vw, 14px);
+      bottom: clamp(6px, 1.5956vw, 12px);
+    }
+    &::after {
+      content: "";
+      transition: background-color 0.3s ease;
+      position: absolute;
+      left: 55%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(4px, 0.55vw, 8px);
+      height: clamp(4.5px, 0.625vw, 9px);
+      background-color: g.$c-white;
+      clip-path: polygon(
+        clamp(4px, 0.55vw, 8px) 50%,
+        0% 0%,
+        0% clamp(4.5px, 0.625vw, 9px)
+      );
+      @include g.mq(md) {
+        width: clamp(6px, 1.5957vw, 12px);
+        height: clamp(7px, 1.86vw, 14px);
+        clip-path: polygon(
+          clamp(6px, 1.5957vw, 12px) 50%,
+          0% 0%,
+          0% clamp(7px, 1.86vw, 14px)
+        );
+      }
+    }
+    &--modal {
+      right: clamp(17.5px, 2.43vw, 35px);
+      top: clamp(17px, 2.361vw, 34px);
+      @include g.mq(md) {
+        top: auto;
+        right: clamp(7px, 1.86vw, 14px);
+        bottom: clamp(6px, 1.5956vw, 12px);
+      }
+    }
+  }
+  &__title {
+    padding-inline-end: 54px;
+    display: flex;
+    align-items: flex-end;
+    gap: clamp(4px, 0.556vw, 8px);
+    @include g.mq(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      color: g.$c-blue;
+      padding-inline-end: 0;
+    }
+    & h3 {
+      font-family: g.$a-otf-futo-go-b101-pro;
+      font-size: clamp(1.6rem, 2.22vw, 3.2rem);
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      flex-shrink: 0;
+      @include g.mq(md) {
+        font-size: clamp(2.4rem, 6.38vw, 4.8rem);
+        line-height: 2.625;
+      }
+    }
+    & p {
+      font-family: g.$novecent-cond-medium;
+      font-size: clamp(1.1rem, 0.9722vw, 1.4rem);
+      line-height: 1.142857;
+      font-weight: 400;
+      opacity: 0.5;
+      text-transform: uppercase;
+      @include g.mq(md) {
+        font-size: clamp(1.4rem, 3.72vw, 2.4rem);
+        margin-block-start: calc(clamp(9px, 2.39vw, 18px) * -1);
+        letter-spacing: .07em;
+      }
+      &.is-modal {
+        @include g.mq(md) {
+          margin-block-start: calc(clamp(10px, 2.65957vw, 20px) * -1);
+        }
+      }
+    }
+    &--modal {
+      width: 300px;
+      flex-wrap: wrap;
+      & h3 {
+        font-size: clamp(1.5rem, 2.08vw, 3rem);
+        // line-height: 2.1;  
+      }
+      
+    }
+  }
+  &__text {
+    margin-block-start: clamp(11.5px, 1.597vw, 23px);
+    @include g.mq(md) {
+      margin-block-start: 0;
+    }
+    & p {
+      font-size: clamp(1.1rem, 1.18vw, 1.7rem);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 1.88;
+      @include g.mq(md) {
+        font-size: clamp(1.3rem, 3.457vw, 2.6rem);
+        line-height: 2;
+      }
+    }
+    &--modal {
+      margin-block-start: clamp(9.5px, 1.3vw, 19px);
+      @include g.mq(md) {
+        margin-block-start: -4px;
+      }
+      & p {
+        font-size: 1.4rem;
+        line-height: 2;
+        @include g.mq(md) {
+          font-size: clamp(1.3rem, 3.457vw, 2.6rem);
+          line-height: 2.0769;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@use "../../global" as g;
+
+.c-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: g.$novecent-cond-medium;
+  gap: 25px;
+  @include g.mq(sm) {
+    gap: 10px;
+  }
+  & > h2 {
+    font-size: 4.2rem;
+    line-height: 2.14;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 400;
+    letter-spacing: .08em;
+    @include g.mq(sm) {
+      font-size: clamp(1.8rem, 4.8vw, 3.6rem);
+      line-height: 1.6667;
+    }
+    &.is-other-contents {
+      letter-spacing: .066em;
+    }
+  }
+  &__bar {
+    height: 14px;
+    width: 100%;
+    @include g.mq(sm) {
+      height: clamp(7.71px, 1.8667vw, 14px);
+    }
+    &--news {
+      @include g.mq(md) {
+        height: 6.02px;
+      }
+    }
+    &--job {
+      @include g.mq(md) {
+        height: 10.43px;
+      }
+    }
+    & > img {
+      filter: drop-shadow(0px 0px 11.34px rgba(255, 255, 255, 1));
+      transform: translateZ(0);
+      width: 0%;
+      height: 100%;
+      transition: none;
+      object-fit: cover;
+    }
+  }
+  &--blue {
+    color: g.$c-blue;
+    & img {
+      filter: none;
+    }
+  }
+  &--main {
+    font-size: 10rem;
+    line-height: 0.96;
+    font-weight: bold;
+    font-weight: 500;
+    // letter-spacing: 0.095em;
+    letter-spacing: 0.06em;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    @include g.mq(md) {
+      font-size: 5.6rem;
+      line-height: 1.7;
+      letter-spacing: 0.09em;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+    & > span {
+      font-family: g.$a-otf-futo-go-b101-pro;
+      font-weight: bold;
+      display: block;
+      font-size: 3.2rem;
+      line-height: 3;
+      // margin-block-start: 1px;
+      margin-block-start: 5px;
+      letter-spacing: 0.09em;
+      @include g.mq(md) {
+        font-size: 2rem;
+        line-height: 4.8;
+        margin-block-start: -35px;
+        margin-block-start: -24px;
+        letter-spacing: 0.09em;
+      }
+      &.is-job {
+        @include g.mq(md) {
+          margin-block-start: -39px;
+        }
+      }
+    }
+    &.is-data {
+      @include g.mq(md) {
+        letter-spacing: .08em;
+      }
+    }
+  }
+  &--item {
+    & .c-title__bar {
+      height: 14px;
+      @include g.mq(sm) {
+        height: 7.71px;
+      }
+    }
+    & h3 {
+      font-size: 2.6rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      line-height: 3.46;
+      white-space: nowrap;
+      @include g.mq(md) {
+        font-size: clamp(1.6rem, 4.2667vw, 3.2rem);
+        line-height: 1.875;
+      }
+    }
+  }
+  &--data {
+    & > h2 {
+      font-size: 12.4rem;
+      font-weight: 400;
+      line-height: 0.774;
+      @include g.mq(md) {
+        font-size: 7rem;
+        line-height: 1.3714;
+      }
+    }
+  }
+  &--news {
+    & > h2 {
+      font-size: 10rem;
+      font-weight: 400;
+      line-height: 0.96;
+      @include g.mq(md) {
+        font-size: clamp(5rem, 13.33vw, 10rem);
+        line-height: 0.72;
+      }
+    }
+  }
+  &--job {
+    & h2 {
+      font-size: 6rem;
+      font-weight: bold;
+      line-height: 1.05;
+      letter-spacing: 0.05em;
+      font-family: g.$a-otf-futo-go-b101-pro;
+    }
+  }
+}

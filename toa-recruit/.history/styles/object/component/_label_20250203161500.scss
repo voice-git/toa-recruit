@@ -1,0 +1,53 @@
+@use "../../global" as g;
+
+.c-label {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    width: 100%;
+    text-align: center;
+    margin-inline: auto;
+    position: relative;
+    overflow: hidden;
+    & > p {
+      color: g.$c-white;
+      font-size: clamp(3.5rem, 4.8611vw, 7rem);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 1.14;
+      z-index: 1;
+      white-space: nowrap;
+      display: inline-block;
+      @include g.mq(md) {
+        font-size: max(8vw, 3rem);
+        line-height: 2.666;
+        max-width: 90vw;
+      }
+      & .is-different {
+        letter-spacing: ;
+      }
+    }
+    & img {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: clamp(567px, 78.75vw, 1134px);
+      width: 100%;
+      height: clamp(29.5px, 4vw, 59px);
+      object-fit: cover;
+      @include g.mq(md) {
+        height: clamp(26px, 6.9vw, 52px);
+        max-width: 95.5vw;
+        width: 100%;
+        top: 45%;
+      }
+    }
+  }
+}

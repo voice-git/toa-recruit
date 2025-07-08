@@ -1,0 +1,100 @@
+@use "../../../global" as g;
+
+.p-mv {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  transition: opacity .5s ease, visibility .5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -11;
+  }
+  &__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    &--first {
+      background-image: url(../images/top/mv-bg-pc@2x.webp);
+      @include g.mq(sm) {
+        background-image: url(../images/top/mv-bg-sp@2x.webp);
+      }
+    }
+    &--second {
+      background-image: url(../images/top/mv-bg-pc02@2x.webp);
+      @include g.mq(sm) {
+        background-image: url(../images/top/mv-bg-sp02@2x.webp);
+      }
+    }
+    &.is-active {
+      opacity: 1;
+    }
+  }
+  &__label {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1004px;
+    width: 100%;
+
+    @include g.mq(sm) {
+      max-width: clamp(360px, 95.7vw, 720px);
+      top: 49%;
+      left: 50%;
+    }
+    & > img {
+      margin-inline: auto;
+    }
+    & > p {
+      @include g.mq(sm) {
+        font-size: clamp(2.7rem, 7.199vw, 5.4rem);
+        font-weight: bold;
+        letter-spacing: -0.05em;
+        line-height: 2.96;
+        text-align: center;
+      }
+    }
+  }
+  &__bar {
+    max-width: 1004px;
+    width: 100%;
+    height: 64px;
+    @include g.mq(sm) {
+      
+    }
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      object-position: left;
+      object-fit: cover;
+      transform: translateY(-50%) translateZ(0);
+      width: 100%;
+      height: auto;
+      @include g.mq(sm) {
+        max-width: clamp(359px, 95.47vw, 718px);
+      }
+    }
+  }
+  &__slogan {
+    position: absolute;
+    bottom: 49px;
+    padding-inline: 2.7778vw;
+    @include g.mq(sm) {
+      bottom: 48px;
+    }
+  }
+}

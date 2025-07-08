@@ -1,0 +1,112 @@
+@use "../../../global" as g;
+
+.p-message {
+  &__container {
+    background-image: url(../images/message/message-fv-bg-pc@2x.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-block: clamp(117.5px, 16.3vw, 235px) clamp(143.5px, 19.93vw, 287px);
+    padding-inline: 2.77778vw;
+    @include g.mq(md) {
+      background-image: url(../images/message/message-fv-bg-sp@2x.jpg);
+      padding-block: 0;
+      height: max(111.2vw, 417px);
+    }
+  }
+  &__inner {
+    max-width: 1095px;
+    margin-inline: auto;
+    @include g.mq(md) {
+      padding-inline: 30px;
+    }
+  }
+  &__title {
+    font-family: g.$novecent-cond-medium;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 3;
+    @include g.mq(md) {
+      font-size: clamp(2rem, 5.33vw, 4rem);
+      line-height: 4.8;
+      padding-inline-start: 30px;
+    }
+  }
+  &__top {
+    margin-block-start: clamp(24px, 3.33vw, 48px);
+    width: clamp(322.5px, 44.79vw, 645px);
+    @include g.mq(md) {
+      margin-block: 0 clamp(33px, 8.8vw, 66px);
+      padding-inline: 30px 1px;
+    }
+    & img {
+    }
+    & > p {
+      @include g.mq(md) {
+        font-size: max(5.3vw, 2rem);
+        letter-spacing: 0.07em;
+        line-height: 1.75;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+    }
+  }
+  &__content {
+    background-image: url(../images/message/message-content-bg-pc@2x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-block: clamp(50px, 6.94vw, 100px) clamp(50.9px, 7.0694vw, 101.8px);
+    padding-inline: 2.77778vw;
+    @include g.mq(md) {
+      padding-block: clamp(27px, 7.2vw, 54px) 141px;
+      background-image: none;
+      background-color: g.$c-bg;
+      padding-inline: 0;
+    }
+    // & p {
+    // }
+  }
+  &__text {
+    font-size: clamp(1.1rem, 1.389vw, 2rem);
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    line-height: 2.3;
+    @include g.mq(md) {
+      font-size: max(4vw, 1.5rem);
+      font-weight: 500;
+      line-height: 2.133;
+    }
+  }
+  &__info {
+    margin-block-start: clamp(22.5px, 3.125vw, 45px);
+    @include g.mq(md) {
+      margin-block-start: 25px;
+    }
+    & > p {
+      font-size: clamp(1.1rem, 1.11vw, 1.6rem);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 2.5;
+      @include g.mq(md) {
+        font-size: max(4vw, 1.5rem);
+        font-weight: 500;
+        line-height: 2.667;
+        text-align: right;
+        font-weight: 500;
+      }
+    }
+    & img {
+      margin-block-start: clamp(10px, 1.389vw, 20px);
+      transform: translateX(-20px);
+      @include g.mq(md) {
+        margin-block-start: 6px;
+        transform: translateX(19px);
+        margin-inline-start: auto;
+        width: max(37.86667vw, 142px);
+        height: max(8.7999vw, 33px);
+      }
+    }
+  }
+}

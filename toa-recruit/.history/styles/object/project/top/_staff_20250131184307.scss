@@ -1,0 +1,372 @@
+@use "../../../global" as g;
+
+.p-staff {
+  background-color: g.$c-bgAndText;
+  &__title {
+    margin-block-end: 53px;
+    @include g.mq(md) {
+      margin-block-end: clamp(46px, 12.2667vw, 92px);
+    }
+  }
+  &__inner {
+    padding-inline: 2.7778vw;
+  }
+  &__slogan {
+    text-align: center;
+    margin-block-end: 100px;
+    @include g.mq(md) {
+      margin-block-end: clamp(62.8px, 16.74667vw, 125.6px);
+    }
+    & > p {
+      font-size: 2.6rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 1.538;
+      margin-block-end: 30px;
+      @include g.mq(md) {
+        font-size: clamp(1.4rem, 3.7333vw, 2.8rem);
+        letter-spacing: 0.03em;
+        line-height: 2.857;
+        margin-block-end: clamp(14px, 3.7333vw, 28px);
+        &:last-child {
+          font-size: 4.5rem;
+          letter-spacing: -0.05em;
+          font-weight: bold;
+          line-height: 1.22;
+          margin-block-end: 0;
+        }
+      }
+    }
+    & img {
+      margin-inline: auto;
+      @include g.mq(md) {
+        width: clamp(254px, 67.733vw, 508px);
+      }
+    }
+  }
+  &__employees {
+    display: flex;
+    background-color: g.$c-white;
+    @include g.mq(md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__employeesImages {
+    width: 50%;
+    position: relative;
+    height: 100vh;
+    @include g.mq(md) {
+      display: contents;
+      height: auto;
+    }
+  }
+  &__employeesImage {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    width: 0%;
+    z-index: 0;
+    overflow: hidden;
+    @include g.mq(md) {
+      position: relative;
+      top: auto;
+      left: auto;
+      opacity: 1;
+      height: 100vw;
+      width: 100%;
+    }
+    &--first {
+      @include g.mq(md) {
+        order: 1;
+      }
+    }
+    &--second {
+      @include g.mq(md) {
+        order: 3;
+      }
+    }
+    &--third {
+      @include g.mq(md) {
+        order: 5;
+      }
+    }
+    &--fourth {
+      @include g.mq(md) {
+        order: 7;
+      }
+    }
+    &--fifth {
+      @include g.mq(md) {
+        order: 9;
+      }
+    }
+    &--sixth {
+      @include g.mq(md) {
+        order: 11;
+      }
+    }
+    &--seventh {
+      @include g.mq(md) {
+        order: 13;
+      }
+    }
+    &--eighth {
+      @include g.mq(md) {
+        order: 15;
+      }
+    }
+    &--ninth {
+      @include g.mq(md) {
+        order: 17;
+      }
+    }
+  }
+  &__pin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &--first {
+      background-image: url(../images/top/employee-bg-001@2x.webp);
+    }
+    &--second {
+      background-image: url(../images/top/employee-bg-002@2x.webp);
+    }
+    &--third {
+      background-image: url(../images/top/employee-bg-003@2x.webp);
+    }
+    &--fourth {
+      background-image: url(../images/top/employee-bg-004@2x.webp);
+    }
+    &--fifth {
+      background-image: url(../images/top/employee-bg-005@2x.webp);
+    }
+    &--sixth {
+      background-image: url(../images/top/employee-bg-006@2x.webp);
+    }
+    &--seventh {
+      background-image: url(../images/top/employee-bg-007@2x.webp);
+    }
+    &--eighth {
+      background-image: url(../images/top/employee-bg-008@2x.webp);
+    }
+    &--ninth {
+      background-image: url(../images/top/employee-bg-009@2x.webp);
+    }
+  }
+  &__employeesSlogan {
+    &--old {
+      position: absolute;
+      // left: 50%;
+      left: 0;
+      top: 52.4%;
+      transform: translateY(-50%);
+      // transform: translate(-50%, -50%);
+      white-space: nowrap;
+      // max-width: clamp(302.5px, 42vw, 605px);
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+      @include g.mq(md) {
+        max-width: 100%;
+        top: 53.4%;
+      }
+      & > p {
+        text-align: center;
+        font-size: clamp(2.5rem, 3.4722vw, 5rem);
+        font-weight: bold;
+        letter-spacing: 0.03em;
+        line-height: 1.6;
+        color: g.$c-white;
+        text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.45);
+        display: inline-block;
+        @include g.mq(md) {
+          letter-spacing: 0;
+          font-size: clamp(2.7rem, 7.199vw, 5.4rem);
+          line-height: 2.96;
+          text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.45);
+        }
+      }
+      & img {
+        clip-path: inset(0 100% 0 0);
+        height: clamp(29.5px, 4.097vw, 59px);
+        // height: clamp(6.1px, 0.84722vw, 12.2px);
+        top: 45%;
+        // filter: drop-shadow(0px 0px 11.34px g.$c-white);
+        transform: translateY(-50%) translateX(-50%), translateZ(0);
+        @include g.mq(md) {
+          height: clamp(3px, 1.6vw, 12px);
+          max-width: clamp(239px, 90.4vw, 678px);
+          left: clamp(8px, 4.8vw, 36px);
+          object-fit: cover;
+          object-position: left;
+        }
+      }
+    }
+  }
+  &__employeesContents {
+    width: 50%;
+    background-color: g.$c-white;
+    @include g.mq(md) {
+      display: contents;
+    }
+  }
+  &__employeesContent {
+    background-color: g.$c-white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include g.mq(md) {
+      height: auto;
+      padding-block: clamp(25px, 6.6vw, 50px) clamp(45px, 12vw, 90px);
+      width: 100%;
+    }
+    &--first {
+      @include g.mq(md) {
+        order: 2;
+      }
+    }
+    &--second {
+      @include g.mq(md) {
+        order: 4;
+      }
+    }
+    &--third {
+      @include g.mq(md) {
+        order: 6;
+      }
+    }
+    &--fourth {
+      @include g.mq(md) {
+        order: 8;
+      }
+    }
+    &--fifth {
+      @include g.mq(md) {
+        order: 10;
+      }
+    }
+    &--sixth {
+      @include g.mq(md) {
+        order: 12;
+      }
+    }
+    &--seventh {
+      @include g.mq(md) {
+        order: 14;
+      }
+    }
+    &--eighth {
+      @include g.mq(md) {
+        order: 16;
+      }
+    }
+    &--ninth {
+      @include g.mq(md) {
+        order: 18;
+      }
+    }
+  }
+  &__employeesInner {
+    position: relative;
+    top: 35px;
+    @include g.mq(md) {
+      top: 0;
+    }
+  }
+  &__employeesHeadline {
+    display: flex;
+    gap: 5.4px;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: clamp(36.5px, 5.0694vw, 73px);
+    @include g.mq(md) {
+      gap: clamp(4px, 1.0667vw, 8px);
+      margin-block-end: clamp(19px, 5vw, 38px);
+    }
+    & > img {
+      @include g.mq(md) {
+        width: clamp(143px, 38.133vw, 286px);
+      }
+    }
+    & > p {
+      @include g.mq(md) {
+        font-size: clamp(1.2rem, 3.2vw, 2.4rem);
+        font-weight: bold;
+        letter-spacing: -0.05em;
+        line-height: 2.64;
+        color: g.$c-blue;
+      }
+    }
+    & > span {
+      font-family: g.$din-pro;
+      font-size: 1.9rem;
+      font-weight: bold;
+      letter-spacing: -0.05em;
+      line-height: 2.1;
+      color: g.$c-blue;
+      @include g.mq(md) {
+        font-size: clamp(1.4rem, 3.72vw, 2.8rem);
+        line-height: 3.264;
+      }
+    }
+  }
+  &__employeesSlogan {
+    &--new {
+      & > p {
+        font-family: g.$a-otf-futo-go-b101-pro;
+        font-size: clamp(3.1rem, 4.3vw, 6.2rem);
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        line-height: 1.548;
+        text-align: center;
+        color: g.$c-blue;
+        @include g.mq(md) {
+          font-size: clamp(3.6rem, 9.6vw, 7.2rem);
+          line-height: 1.3888;
+        }
+      }
+    }
+  }
+  &__employeesInfo {
+    margin-block-start: clamp(16px, 2.222vw, 32px);
+    @include g.mq(md) {
+      margin-block-start: clamp(6.5px, 1.7vw, 13px);
+    }
+    & > p {
+      font-size: clamp(1.1rem, 1.5277vw, 2.2rem);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 1.818;
+      color: g.$c-blue;
+      text-align: center;
+      @include g.mq(md) {
+        font-size: clamp(1.3rem, 3.466vw, 2.6rem);
+        line-height: 3.0769;
+      }
+    }
+  }
+  &__button {
+    margin-inline: auto;
+    margin-block-start: clamp(26.75px, 3.7vw, 53.5px);
+    @include g.mq(md) {
+      margin-block-start: clamp(20px, 5.8667vw, 40px);
+    }
+    & svg {
+      @include g.mq(md) {
+        width: 65px;
+      }
+    }
+  }
+}

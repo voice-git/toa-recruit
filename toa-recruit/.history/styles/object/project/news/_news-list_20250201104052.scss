@@ -1,0 +1,135 @@
+@use "../../../global" as g;
+
+.p-news-list {
+  padding-block: 140px 151px;
+  @include g.mq(md) {
+    padding-block: 102px 61px;
+  }
+  &__titleJp {
+    font-weight: bold;
+    font-size: 2.6rem;
+    letter-spacing: 0.05em;
+    line-height: 3.46;
+    text-align: center;
+    margin-block-start: -10px;
+    @include g.mq(md) {
+      font-size: 1.8rem;
+      line-height: 5.333;
+      margin-block-start: -20px;
+    }
+  }
+  &__inner {
+    padding-inline: 2.7778vw;
+    @include g.mq(md) {
+      padding-inline: 15px;
+    }
+  }
+
+  &__wrapper {
+    margin-block-start: 73px;
+    max-width: 1085px;
+    margin-inline: auto;
+    @include g.mq(md) {
+      margin-block-start: 15px;
+    }
+  }
+  &__item {
+    padding-block: 35px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    @include g.mq(md) {
+      padding-block: clamp(26.5px, 7.04787vw, 50px);
+      padding-inline: 15px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      background-color: g.$c-white;
+      box-shadow: 0px 0px 22.68px 0px rgba(255, 255, 255, 1);
+      @include g.mq(md) {
+        height: 2px;
+      }
+    }
+    &:first-child {
+      &::before {
+        content: "";
+        top: 0;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 4px;
+        background-color: g.$c-white;
+        box-shadow: 0px 0px 22.68px 0px rgba(255, 255, 255, 1);
+        @include g.mq(md) {
+          height: 2px;
+        }
+      }
+    }
+    &.is-hidden {
+      display: none;
+    }
+  }
+  &__content {
+    position: relative;
+    top: -26px;
+    @include g.mq(md) {
+      top: -6px;
+    }
+  }
+  &__date {
+    font-family: g.$novecent-cond-medium;
+    font-size: 2.4rem;
+    line-height: 4.36;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    @include g.mq(md) {
+      font-size: clamp(1.6rem, 4.255vw, 3.2rem);
+      line-height: 1.857;
+      letter-spacing: 0.07em;
+    }
+  }
+  &__itemTitle {
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size: 3.2rem;
+    line-height: 1.21875;
+    margin-block-start: -4px;
+    @include g.mq(md) {
+      font-size: clamp(1.4rem, 3.733vw, 2.8rem);
+      line-height: 1.714;
+      margin-block-start: clamp(6px, 1.5957vw, 12px);
+      letter-spacing: .09em;
+    }
+  }
+  &__image {
+    width: 330px;
+    height: 245px;
+    flex-shrink: 0;
+    @include g.mq(md) {
+      width: clamp(143px, 38vw, 286px);
+      height: clamp(106px, 28.1vw, 210px);
+    }
+    &:hover {
+      
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__button {
+    margin-block-start: 93px;
+    margin-inline: auto;
+    @include g.mq(md) {
+        margin-block-start: clamp(66px, 17.55vw, 133.8px);
+    }
+  }
+}

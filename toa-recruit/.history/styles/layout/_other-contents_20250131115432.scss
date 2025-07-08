@@ -1,0 +1,354 @@
+@use "../global" as g;
+
+.l-other-contents {
+  &--second {
+    @include g.mq(md) {
+      padding-block: 0 94px;
+    }
+  }
+  &--guideline {
+    padding-block-end: 60px;
+    @include g.mq(md) {
+      padding-block-end: 25px;
+    }
+    & .l-other-contents__item {
+      &:first-child {
+        @include g.mq(sm) {
+          order: 1;
+        }
+      }
+      &:nth-child(2) {
+        @include g.mq(sm) {
+          order: 2;
+        }
+      }
+      &:nth-child(3) {
+        @include g.mq(sm) {
+          order: 3;
+        }
+      }
+      &:last-child {
+        @include g.mq(sm) {
+          order: 4;
+        }
+      }
+    }
+  }
+  &__title {
+    margin-block-end: 50px;
+    @include g.mq(sm) {
+      margin-block-end: 33px;
+    }
+    &--second {
+      margin-block-end: 30px;
+      @include g.mq(md) {
+        margin-block-end: 20px;
+      }
+    }
+  }
+  &__inner {
+    padding-inline: 2.7778vw;
+    @include g.mq(sm) {
+      padding-inline: 30px 30px;
+    }
+  }
+  &__list {
+    max-width: 1169px;
+    margin-inline: auto;
+    &--second {
+      max-width: 1340px;
+      display: grid;
+      align-items: center;
+      justify-content: space-between;
+      gap: 11px;
+      grid-template-columns: 1fr 1fr;
+      @include g.mq(md) {
+        flex-direction: column;
+        gap: clamp(10px, 2.6667vw, 20px);
+        grid-template-columns: 1fr;
+      }
+    }
+    &--job {
+      @include g.mq(sm) {
+        & .l-other-contents__item {
+          &:first-child {
+              order: 2;
+          }
+          &:nth-child(2) {
+              order: 1;
+          }
+          &:nth-child(3) {
+              order: 4;
+          }
+          &:last-child {
+              order: 3;
+          }
+        }
+      }
+    }
+  }
+  &__item {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: clamp(267.5px, 37.15vw, 535px);
+    margin-block-end: 13px;
+    width: 100%;
+    @include g.mq(sm) {
+      height: clamp(315.76px, 84.2vw, 631.52px);
+      max-width: 100%;
+      margin-block-end: 0;
+      padding-inline-start: 0;
+      position: relative;
+    }
+    &:first-child {
+      background-image: url(../images/common/toa_data-bg-pc@2x.webp);
+      & h3 {
+        letter-spacing: 0.095em;
+      }
+      & .c-button {
+        margin-block-start: clamp(25px, 13.29787vw, 50px);
+      }
+      @include g.mq(sm) {
+        background-image: url(../images/common/toadata-bg-sp@2x.webp);
+        order: 1;
+      }
+    }
+    &:nth-child(2) {
+      background-image: url(../images/common/faq-bg@2x.webp);
+      @include g.mq(sm) {
+        background-image: url(../images/common/faq-bg-sp@2x.webp);
+        order: 2;
+      }
+    }
+    &:nth-child(3) {
+      @include g.mq(sm) {
+        order: 4;
+      }
+    }
+    &:last-child {
+      background-image: url(../images/common/guideline-bg-pc@2x.webp);
+      margin-block-end: 0;
+      & h3 {
+        letter-spacing: .08em;
+        @include g.mq(md) {
+          letter-spacing: .07em;
+        }
+      }
+      @include g.mq(sm) {
+        background-image: url(../images/common/guideline-bg-sp@2x.webp);
+        order: 3;
+      }
+    }
+    &--second {
+      max-height: clamp(186.5px, 25.9vw, 373px);
+      margin-block-end: 0;
+      position: relative;
+      @include g.mq(md) {
+        width: 100%;
+        height: 100vw;
+        height: clamp(316px, 84.266vw, 632px);
+        max-height: 100%;
+      }
+      &.is-job {
+        background-image: url(../images/common/job-category-bg@2x.webp);
+        & h3 {
+          letter-spacing: .07em;
+          transform: translateX(8px);
+        }
+        @include g.mq(md) {
+          & h3 {
+            transform: translateX(6px);
+            letter-spacing: .07em;
+          }
+          background-image: url(../images/common/job-category-bg-sp@2x.webp);
+        }
+      }
+      &.is-message {
+        background-image: url(../images/common/message-bg@2x.webp);
+        & h3 {
+          letter-spacing: .06em;
+        }
+        @include g.mq(md) {
+          background-image: url(../images/common/message-bg-sp@2x.webp);
+          & h3 {
+            letter-spacing: .065em;
+          }
+        }
+      }
+      &.is-guidelines {
+        background-image: url(../images/common/guidelines-second-bg@2x.webp);
+        & h3 {
+          letter-spacing: .08em;
+        }
+        @include g.mq(md) {
+          background-image: url(../images/common/guidelines-second-bg-sp@2x.webp);
+          & h3 {
+            letter-spacing: .07em;
+          }
+        }
+      }
+      &.is-data {
+        background-image: url(../images/common/data-second-bg@2x.webp);
+        @include g.mq(md) {
+          background-image: url(../images/common/data-second-bg-sp@2x.webp);
+        }
+        & h3 {
+          @include g.mq(md) {
+            letter-spacing: .09em;
+          }
+        }
+      }
+      &.is-faq {
+        background-image: url(../images/common/faq-bg@2x.webp);
+        @include g.mq(sm) {
+          background-image: url(../images/common/faq-bg-sp@2x.webp);
+          & h3 {
+            transform: translate(5px, 4px);
+          }
+        }
+      }
+      & > a {
+        padding-inline-start: clamp(10px, 1.3889vw, 20px);
+        @include g.mq(md) {
+          padding-inline-start: clamp(15px, 4vw, 30px);
+        }
+        &:hover {
+          opacity: 1.1;
+        }
+      }
+    }
+    & > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-inline-start: clamp(40px, 5.5555vw, 80px);
+      white-space: nowrap;
+      @include g.mq(sm) {
+        padding-inline-start: 0;
+      }
+      &:hover {
+        opacity: 1.1;
+      }
+    }
+  }
+  &__itemTitle {
+    font-weight: 500;
+    font-family: g.$novecent-cond-medium;
+    font-size: clamp(5rem, 6.944vw, 10rem);
+    color: g.$c-white;
+    line-height: 0.96;
+    letter-spacing: .09em;
+    padding-block-start: clamp(70px, 9.7222vw, 140px);
+    @include g.mq(sm) {
+      font-size: clamp(5rem, 13.33vw, 10rem);
+      line-height: 1;
+      padding-block-start: 0;
+      position: absolute;
+      bottom: 14px;
+      left: 15px;
+      white-space: nowrap;
+      letter-spacing: .096em;
+      font-weight: 500;
+    }
+    & > span {
+      font-family: g.$a-otf-futo-go-b101-pro;
+      font-weight: bold;
+      font-size: clamp(1.5rem, 2.08333vw, 3rem);
+      letter-spacing: 0.09em;
+      line-height: 3.2;
+      display: block;
+      @include g.mq(sm) {
+        font-size: clamp(1.6rem, 4.2667vw, 3.2rem);
+        letter-spacing: 0.08em;
+        line-height: 1.5625;
+        margin-block-start: 5px;
+      }
+    }
+    &--second {
+      font-size: clamp(3rem, 4.1667vw, 6rem);
+      line-height: 1.266667;
+      padding-block-start: 0px;
+      padding-inline-start: 0px;
+      position: absolute;
+      left: clamp(10px, 1.3889vw, 20px);
+      bottom: 8px;
+      white-space: nowrap;
+      @include g.mq(md) {
+        font-size: clamp(5rem, 13.33vw, 10rem);
+        line-height: 1;
+        top: auto;
+        bottom: clamp(16px, 4.266vw, 32px);
+        left: clamp(15px, 4vw, 30px);
+      }
+      & > span {
+        font-size: clamp(1.6rem, 1.59722vw, 2.3rem);
+        line-height: 1.565;
+        display: inline;
+        @include g.mq(md) {
+          font-size: clamp(1.6rem, 4.2667vw, 3.2rem);
+          line-height: 1.5625;
+          letter-spacing: 0.08em;
+          margin-block-start: clamp(5px, 1.33vw, 10px);
+          display: block;
+        }
+      }
+    }
+  }
+  &__circle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: solid 1px g.$c-white;
+    position: absolute;
+    right: 21px;
+    bottom: 21px;
+    @include g.mq(sm) {
+      display: block;
+      width: clamp(35px, 9.333vw, 70px);
+      height: clamp(35px, 9.333vw, 70px);
+      right: clamp(10px, 2.667vw, 20px);
+      bottom: clamp(14px, 3.7vw, 26.24px);
+      & > svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &--second {
+      display: block;
+      @include g.mq(md) {
+        display: block;
+        width: clamp(35px, 9.333vw, 70px);
+        height: clamp(35px, 9.333vw, 70px);
+        right: clamp(10px, 2.667vw, 20px);
+        bottom: clamp(14px, 3.7vw, 26.24px);
+        & > svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: clamp(9.55px, 2.54667vw, 19.1px);
+          height: clamp(8.48px, 2.26vw, 16.96px);
+        }
+      }
+    }
+    & > svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__button {
+    margin-block-start: clamp(27.5px, 3.8194vw, 55px);
+    @include g.mq(sm) {
+      display: none;
+    }
+    &--second {
+      display: none;
+    }
+  }
+}

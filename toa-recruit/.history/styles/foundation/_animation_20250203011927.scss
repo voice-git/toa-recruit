@@ -1,0 +1,71 @@
+@use "../global" as g;
+
+// モーダルアニメーション
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes showSlide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.js-slideIn,
+.js-interviewNot {
+  clip-path: inset(0 100% 0 0);  // 右側を隠して幅0%にする
+  // transition: clip-path .5s ease;
+  transition: clip-path .5s cubic-bezier(0.86, 0, 0.07, 1);
+  overflow: hidden;
+  display: inline-block;
+}
+
+.js-staffNot {
+  @inc
+  clip-path: inset(0 100% 0 0);  // 右側を隠して幅0%にする
+  transition: clip-path .5s cubic-bezier(0.86, 0, 0.07, 1);
+  overflow: hidden;
+  display: inline-block;
+}
+
+.js-interviewSlideIn {
+  clip-path: inset(0 100% 0 0);
+  // transition: clip-path .5s ease;
+  transition: clip-path .5s cubic-bezier(0.86, 0, 0.07, 1);
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+// スライド表示
+.js-slide {
+  overflow: hidden;
+  transform: translate(-100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+  & .js-slide-content {
+    display: block;
+    transform: translate(100%, 0);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+  }
+  &.is-visible,
+  &.is-visible .js-slide-content {
+    transform: translate(0, 0);
+  }
+}
+

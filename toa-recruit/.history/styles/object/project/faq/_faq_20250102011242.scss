@@ -1,0 +1,214 @@
+@use "../../../global" as g;
+
+.p-faq {
+  background-color: g.$c-bg;
+  &__container {
+    background-image: url(../images/faq/faq-fv-bg-pc@2x.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-block: 189px 130px;
+    @include g.mq(md) {
+      background-image: url(../images/faq/faq-fv-bg-sp@2x.jpg);
+      padding-block: 126px 103px;
+    }
+  }
+  &__title {
+    // text-align: center;
+    &--item {
+      margin-block: 40px 35px;
+      &:first-of-type {
+        margin-block-start: 0;
+      }
+    }
+  }
+  &__inner {
+    padding-block: clamp(79px, 10.972vw, 158px) clamp(94.5px, 13.125vw, 189px);
+    @include g.mq(md) {
+      padding-block: clamp(37px, 9.8667vw, 74px) clamp(113px, 30.13vw, 226px);
+    }
+  }
+  &__items {
+    padding-inline: 44px 46px;
+    @include g.mq(md) {
+      padding-inline: 30px 30px;
+    }
+  }
+  &__item {
+    background-color: g.$c-white;
+    margin-block-end: clamp(12.5px, 1.73611vw, 25px);
+    padding-inline: clamp(19px, 2.6vw, 38px) clamp(16.9px, 2.3472vw, 33.8px);
+    // max-width: 995px;
+    max-width: 1085px;
+    margin-inline: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, .75);
+    @include g.mq(md) {
+      margin-block-end: clamp(20px, 5.33vw, 40px);
+      // padding-inline: clamp(25px, 6.667vw, 50px) clamp(15px, 4vw, 30px);
+      padding-inline: 0;
+    }
+    &:last-child {
+      margin-block-end: 0;
+    }
+  }
+  &__header {
+    padding-block: clamp(10px, 1.3889vw, 20px) clamp(15px, 2.083vw, 30px);
+    color: g.$c-blue;
+    font-size: clamp(1.2rem, 1.6667vw, 2.4rem);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.91667;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    cursor: pointer;
+    // transition: ;
+    @include g.mq(md) {
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.7778;
+      font-size: clamp(1.8rem, 4.8vw, 36px);
+      padding-block: clamp(18px, 4.8vw, 36px) clamp(25px, 6.667vw, 50px);
+      padding-inline: clamp(25px, 6.667vw, 50px) clamp(50px, 13.33vw, 100px);
+    }
+
+    // &::before,
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 50%;
+    //   display: block;
+    //   width: 16px;
+    //   height: 2px;
+    //   content: "";
+    //   background-color: currentColor;
+    //   right: 30px;
+    // }
+    // &::before {
+    //   transform: translateY(-50%);
+    // }
+    // &::after {
+    //   transition: transform 0.5s;
+    //   transform: translateY(-50%) rotate(-90deg);
+    // }
+    .Accordion[open]:not([data-accordion-before-close]) &::after {
+      transform: translateY(-50%);
+    }
+  }
+  &__q {
+    font-family: g.$din-pro;
+    font-size: clamp(1.8rem, 2.5vw, 3.6rem);
+    font-weight: 500;
+    line-height: 1.8333;
+    // line-height: normal;
+    margin-inline-end: clamp(11.425px, 1.5868vw, 22.85px);
+    position: relative;
+    top: .25em;
+    @include g.mq(md) {
+      // // line-height: 1.8857;
+      // font-size: 3.5rem;
+      // margin-inline-end: 0;
+
+      display: none;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: clamp(11.45px, 1.59vw, 22.9px);
+    height: 1px;
+    background-color: g.$c-blue;
+    right: 0;
+    transform: translateY(-50%);
+    @include g.mq(md) {
+      width: clamp(13px, 3.4667vw, 26px);
+      // height: 1px;
+      transform: none;
+      height: clamp(1px, 0.266vw, 2px);
+      // top: 50%;
+      right: clamp(15px, 4vw, 30px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      right: 0;
+      width: clamp(11.45px, 1.59vw, 22.9px);
+      height: 1px;
+      background-color: g.$c-blue;
+      transition: transform 0.5s;
+      transform: translateY(-50%) rotate(-90deg);
+      @include g.mq(md) {
+        width: clamp(13px, 3.4667vw, 26px);
+        height: clamp(1px, 0.266vw, 2px);
+        transform: rotate(-90deg);
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  details.is-opened {
+    .p-faq__icon {
+      &::after {
+        content: "";
+        transform: translateY(-50%);
+      }
+
+      //   @include g.mq(md) {
+      //     transform: translateX(50%) rotate(180deg);
+      //   }
+    }
+  }
+  &__content {
+    overflow: hidden;
+    // position: relative;
+    // top: -15px;
+  }
+  &__contentInner {
+    padding-block-end: clamp(20px, 2.7778vw, 40px);
+    // padding-inline: 30px 31px;
+    display: flex;
+    align-items: flex-start;
+    padding-inline-end: clamp(17.15px, 2.38vw, 34.3px);
+    @include g.mq(md) {
+      flex-direction: column;
+      padding-inline-end: 0;
+      padding-block-end: clamp(30px, 8vw, 60px);
+    }
+  }
+  &__a {
+    font-family: g.$din-pro;
+    font-size: clamp(1.8rem, 2.5vw, 3.6rem);
+    font-weight: 500;
+    line-height: 1.833;
+    // line-height: normal;
+    margin-inline-end: clamp(10.85px, 1.5vw, 21.7px);
+    color: g.$c-blue;
+    position: relative;
+    top: -.3em;
+    @include g.mq(md) {
+      font-size: clamp(3.5rem, 9.33vw, 7rem);
+      line-height: 1.8857;
+      // line-height: normal;
+      margin-inline: auto;
+      top: 0;
+    }
+  }
+  &__answer {
+    font-weight: bold;
+    font-size: clamp(1.3rem, 1.25vw, 1.8rem);
+    line-height: 2;
+    letter-spacing: 0.1em;
+    color: g.$c-black;
+    @include g.mq(md) {
+      font-weight: 500;
+      line-height: 2.133;
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      padding-inline: clamp(26px, 6.93vw, 52px) clamp(29px, 7.73vw, 58px);
+    }
+  }
+}
